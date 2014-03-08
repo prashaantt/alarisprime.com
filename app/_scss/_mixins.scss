@@ -1,0 +1,17 @@
+// Clearfix
+// For clearing floats like a boss h5bp.com/q
+@mixin clearfix {    
+    // For IE 6/7 (trigger hasLayout)
+    *zoom: 1;
+    
+    // For modern browsers
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    
+    &:after {
+        clear: both;
+    }
+}
