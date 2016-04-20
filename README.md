@@ -2,6 +2,8 @@
 
 ## Development
 
+`npm i` to install npm packages.
+
 ### Develoment server
 
 Run `npm run serve` to run the development build, watch for changes and serve locally.
