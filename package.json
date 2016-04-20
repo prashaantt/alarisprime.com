@@ -17,7 +17,9 @@
     "build:css": "node-sass --source-map-embed ./scss -o ./dist/css",
     "build:js": "webpack",
     "build:images": "cpx ./images/** ./dist/images/",
-    "server": "browser-sync start --server 'dist' --files 'dist'"
+    "server": "browser-sync start --server 'dist' --files 'dist'",
+    "predeploy": "npm run build",
+    "deploy": "s3_website push"
   },
   "repository": {
     "type": "git",

@@ -10,6 +10,6 @@ Run `npm run serve` to run the development build, watch for changes and serve lo
 
 `npm run build` to build the website for production.
 
-### Publish
+### Deploy
 
-`npm run publish`
+`npm run deploy`
