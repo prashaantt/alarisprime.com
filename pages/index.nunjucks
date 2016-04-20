@@ -1,0 +1,6 @@
+{% extends "./layouts/base.nunjucks" %}
+
+{% block content %}
+{% include "./includes/header.nunjucks" %}
+<p>Hello World</p>
+{% endblock %}

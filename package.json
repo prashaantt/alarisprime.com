@@ -4,7 +4,12 @@
   "description": "The website for Alaris Prime LLC",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "npm-run-all clean --parallel build:*",
+    "build:html": "metalsmith",
+    "build:css": "node-sass --source-map-embed ./scss/main.scss ./dist/css/main.css",
+    "build:js": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +20,19 @@
     "Brajeshwar Oinam <b@alarisprime.com> (http://http://brajeshwar.me/)"
   ],
   "license": "UNLICENSED",
-  "homepage": "https://alarisprime.com"
+  "homepage": "https://alarisprime.com",
+  "dependencies": {
+    "browser-sync": "^2.12.3",
+    "cpx": "^1.3.1",
+    "metalsmith": "^2.1.0",
+    "metalsmith-define": "^2.0.1",
+    "metalsmith-in-place": "^1.4.3",
+    "node-sass": "^3.4.2",
+    "npm-run-all": "^1.7.0",
+    "nunjucks": "^2.4.2",
+    "rimraf": "^2.5.2",
+    "watch": "^0.17.1",
+    "webfontloader": "^1.6.24",
+    "webpack": "^1.13.0"
+  }
 }

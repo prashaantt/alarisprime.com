@@ -1,0 +1,16 @@
+{
+  "source": "pages",
+  "destination": "dist",
+  "clean": false,
+  "plugins": {
+    "metalsmith-in-place": {
+      "engine": "nunjucks",
+      "rename": true
+    },
+    "metalsmith-define": {
+      "site": {
+        "title": "Alaris Prime"
+      }
+    }
+  }
+}
