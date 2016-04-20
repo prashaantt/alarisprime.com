@@ -5,12 +5,19 @@
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
+    "preserve": "npm run clean",
+    "serve": "npm-run-all --parallel server watch:*",
+    "watch:html": "watch 'npm run build:html' ./pages ./layouts ./includes",
+    "watch:js": "npm run build:js -- --watch",
+    "watch:css": "npm-run-all build:css 'build:css -- -w -r'",
+    "watch:images": "npm run build:images -- -w",
     "prebuild": "npm run clean",
     "build": "npm-run-all clean --parallel build:*",
     "build:html": "metalsmith",
-    "build:css": "node-sass --source-map-embed ./scss/entry.scss ./dist/css/bundle.css",
+    "build:css": "node-sass --source-map-embed ./scss -o ./dist/css",
     "build:js": "webpack",
-    "build:images": "cpx ./images/** ./dist/images/"
+    "build:images": "cpx ./images/** ./dist/images/",
+    "server": "browser-sync start --server 'dist' --files 'dist'"
   },
   "repository": {
     "type": "git",
