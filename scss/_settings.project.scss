@@ -16,7 +16,7 @@ $color-link: $color-brand;
 $color-link-hover: mix($color-shadow, $color-brand, 10%);
 
 // Typography
-$base-opentype-features: "kern", "frac";
+$base-opentype-features: 'kern', 'frac';
 
 // Spacing
 $base-line-height: 26px; // $root-line-height * $root-font-size
