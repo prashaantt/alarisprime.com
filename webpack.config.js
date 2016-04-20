@@ -3,5 +3,10 @@ module.exports = {
 	output: {
 		path: "./dist/scripts/",
 		filename: "bundle.js"
+	},
+	module: {
+		loaders: [
+		{ test: /\.js$/, loaders: ['babel-loader'] }
+		]
 	}
 };
