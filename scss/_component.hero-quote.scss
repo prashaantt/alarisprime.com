@@ -7,7 +7,6 @@
 
   padding: ($base-spacing-unit * 4) $base-spacing-unit;
 
-  font-size: modular-scale(1);
   color: $color-text-light;
 
   a {
@@ -16,6 +15,8 @@
 
   @include bp(medium) {
     @include span-columns(8);
+
+    font-size: modular-scale(1);
   }
 
   @include bp(large) {

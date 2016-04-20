@@ -14,6 +14,10 @@
   padding: 0 $base-spacing-unit;
 
   @include bp(medium) {
+    @include span-columns(8);
+  }
+
+  @include bp(large) {
     @include span-columns(6);
   }
 }
