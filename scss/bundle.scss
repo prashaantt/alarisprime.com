@@ -1,7 +1,22 @@
-html {
-	font-family: "franklin-gothic-urw", sans-serif;
-}
+@import 'settings.vendor';
 
-body {
-	border: 1em solid green;
-}
+@import 'bourbon/app/assets/stylesheets/bourbon';
+@import 'bourbon-neat/app/assets/stylesheets/neat';
+
+@import 'settings.project';
+
+@import 'sanitize.css/lib/sanitize.scss';
+
+// Tools
+@import 'tools.breakpoints';
+
+// Base
+@import 'base';
+
+// Components
+@import 'component.logo';
+@import 'component.hero-quote';
+@import 'component.hero';
+@import 'component.header';
+@import 'component.footer';
+

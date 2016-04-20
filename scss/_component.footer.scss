@@ -1,0 +1,12 @@
+.footer {
+  @include outer-container;
+}
+
+.footer__inner {
+  @include span-columns(12);
+
+  padding: ($base-spacing-unit * 2) $base-spacing-unit;
+
+  font-size: modular-scale(-1);
+  color: $color-text-light;
+}

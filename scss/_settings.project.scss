@@ -1,0 +1,23 @@
+$jade: #00a86b;
+
+$color-brand:        $jade;
+$color-grey-lighter: #d1d6d4;
+$color-grey-light:   #b0bab5;
+$color-grey:         #698075;
+$color-grey-dark:    #40574d;
+
+$color-shadow:       $root-color; // #0d1c0d;
+$color-highlight:    #f2f5f5;
+
+$color-text: $color-shadow;
+$color-text-light: $color-grey-light;
+
+$color-link: $color-brand;
+$color-link-hover: mix($color-shadow, $color-brand, 10%);
+
+// Typography
+$base-opentype-features: "kern", "frac";
+
+// Spacing
+$base-line-height: 26px; // $root-line-height * $root-font-size
+$base-spacing-unit: rem($base-line-height / 2);

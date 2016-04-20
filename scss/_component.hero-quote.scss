@@ -1,0 +1,24 @@
+.hero-quote {
+  @include outer-container;
+}
+
+.hero-quote__inner {
+  @include span-columns(12);
+
+  padding: ($base-spacing-unit * 4) $base-spacing-unit;
+
+  font-size: modular-scale(1);
+  color: $color-text-light;
+
+  a {
+    color: $color-text-light;
+  }
+
+  @include bp(medium) {
+    @include span-columns(8);
+  }
+
+  @include bp(large) {
+    @include span-columns(6);
+  }
+}

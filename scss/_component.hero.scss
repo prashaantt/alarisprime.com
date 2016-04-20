@@ -1,0 +1,19 @@
+.hero {
+  @include outer-container;
+}
+
+.hero__inner {
+  // @include span-columns(12);
+
+  padding: ($base-spacing-unit * 2) 0;
+}
+
+.hero__text-unit {
+  @include span-columns(12);
+
+  padding: 0 $base-spacing-unit;
+
+  @include bp(medium) {
+    @include span-columns(6);
+  }
+}

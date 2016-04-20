@@ -1,0 +1,21 @@
+.logo {
+  display: inline-block;
+  height: $base-spacing-unit * 1.461538462; // 19px / 13px
+
+  svg {
+    display: block;
+    height: 100%;
+    fill: $color-brand;
+  }
+}
+
+.logo--tiny {
+  height: $base-spacing-unit * .846153846; // 11px / 13px
+  vertical-align: baseline;
+}
+
+.logo--monochrome {
+  svg {
+    fill: $color-text-light;
+  }
+}
