@@ -35,6 +35,7 @@ a,
   &:hover,
   &:active,
   &:focus {
+    text-shadow: 1px 1px $color-white;
     box-shadow: 0 1px $color-link, inset 0 -3px $color-link;
   }
 }
