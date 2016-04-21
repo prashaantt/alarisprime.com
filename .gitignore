@@ -1,5 +1,8 @@
 node_modules/
 dist/
+s3_website.yml
+*.sublime-project
+*.sublime-workspace
 
 # Ignore hidden folders #
 # This takes care of .tmp, .sass-cache, and many others #

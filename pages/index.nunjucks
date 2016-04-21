@@ -3,21 +3,36 @@
 {% block content %}
 {% include "./includes/header.njk" %}
 <div class="hero-quote">
-	<div class="hero-quote__inner">
-		<blockquote>
-			“Design is not making beauty; beauty emerges from selection, affinities, integration, love.”<cite><a href="https://en.wikipedia.org/wiki/Louis_Kahn">Louis Kahn</a></cite>
-		</blockquote>
-	</div>
+  <div class="hero-quote__inner">
+    <blockquote>
+      “Design is not making beauty; beauty emerges from selection, affinities, integration, love.”<cite><a href="//en.wikipedia.org/wiki/Louis_Kahn">Louis Kahn</a></cite>
+    </blockquote>
+  </div>
 </div>
 
 <div class="hero">
-	<div class="hero__inner">
-		<div class="hero__text-unit">
-			<p>We believe in simple and practical approach in making websites, web-apps and mobile apps. While it should be easy & simple for users, it should bring higher Return on Investment for you. We help you make an optimized, well-designed, human-focused product for you.</p>
-			<p>We have helped, <a href="http://www.razorfish.com/">Razorfish</a>, <a href="https://www.compile.com/">Compile</a>, <a href="http://www.indianstage.in">Indianstage</a>, <span class="caps-to-small-caps">STARZ</span>, <span class="caps-to-small-caps">OBEO</span>, Pearson Publishing, OnMobile, <span class="caps-to-small-caps">ILFS</span>, Cambridge University Entrepreneurs, <span class="caps-to-small-caps">TCS</span>, Let’s Go Holdings and many more.</p>
-			<p><a href="https://alarisprime.wufoo.com/forms/zdswikn1dig9qh/">Let’s discuss your project</a></p>
-		</div>
-	</div>
+  <div class="hero__inner">
+    <div class="hero__text-unit">
+      <p>We believe in simple and practical approach in making websites, web-apps and mobile apps. While it should be easy & simple for users, it should bring higher Return on Investment for you. We help you make an optimized, well-designed, human-focused product for you.</p>
+      <p>We have helped,
+        <a href="//www.razorfish.com/">Razorfish</a>,
+        <a href="//www.compile.com/">Compile</a>,
+        <a href="//www.indianstage.in">Indianstage</a>,
+        <a href="//www.starz.com/"><span class="caps-to-small-caps">STARZ</span></a>,
+        <a href="//www.obeo.com/"><span class="caps-to-small-caps">OBEO</span></a>,
+        <a href="//www.pearsoned.com/">Pearson Publishing</a>,
+        <a href="//www.onmobile.com/">OnMobile</a>,
+        <a href="//www.ilfsindia.com/"><span class="caps-to-small-caps">ILFS</span></a>,
+        <a href="//www.cue.org.uk/">Cambridge University Entrepreneurs</a>,
+        <a href="//www.tcs.com/"><span class="caps-to-small-caps">TCS</span></a>,
+        <a href="//www.linkedin.com/company/let's-go-holdings">Let’s Go Holdings</a>,
+        and many more.
+      </p>
+      <p>
+        <a href="//alarisprime.wufoo.com/forms/zdswikn1dig9qh/">Let’s discuss your project</a>
+      </p>
+    </div>
+  </div>
 </div>
 {% include "./includes/footer.njk" %}
 {% endblock %}
