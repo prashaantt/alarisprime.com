@@ -11,13 +11,27 @@ img {
   max-width: 100%;
 }
 
-a {
+a,
+.link {
   color: $color-link;
 
   &:hover,
   &:active,
   &:focus {
     color: $color-link-hover;
+  }
+}
+
+.link--minor {
+  color: $color-text;
+  box-shadow: 0 1px $color-link;
+
+  transition: color $base-transition-delay $base-transition-easing, box-shadow $base-transition-delay $base-transition-easing;
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: 0 1px $color-link, inset 0 -3px $color-link;
   }
 }
 
