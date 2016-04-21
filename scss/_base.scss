@@ -24,7 +24,7 @@ a,
 
 .link--minor {
   color: $color-text;
-  box-shadow: 0 1px $color-link;
+  box-shadow: 0 1px mix($color-highlight, $color-link, 60%);
 
   transition: color $base-transition-delay $base-transition-easing, box-shadow $base-transition-delay $base-transition-easing;
 
