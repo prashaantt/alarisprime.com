@@ -6,13 +6,13 @@
 
 ### File structure
 
-|-- root - Keep all static files — robots.txt, favicon.ico,… – which needs to be copied to the root of the website
-|-- images 
-|-- pages - pages to be rendered
-|-- layout - Nunjuck templates, which can be used for pages
-|-- includes - Nunjuck include files
-|-- scss 
-+-- scripts
+	|-- root - Keep all static files — robots.txt, favicon.ico,… – which needs to be copied to the root of the website
+	|-- images 
+	|-- pages - pages to be rendered
+	|-- layout - Nunjuck templates, which can be used for pages
+	|-- includes - Nunjuck include files
+	|-- scss 
+	+-- scripts
 
 ### Develoment server
 
