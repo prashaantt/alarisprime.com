@@ -2,7 +2,7 @@ html {
   font-feature-settings: $base-opentype-features;
 
   &.wf-active {
-    font-family: 'skolar-sans-latin', Avenir, 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'skolar-sans-latin', $root-font-family;
   }
 }
 
