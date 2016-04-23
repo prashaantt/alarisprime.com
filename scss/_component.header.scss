@@ -5,5 +5,5 @@
 .header__inner {
   @include span-columns(12);
 
-  padding: ($base-spacing-unit * 2) $base-spacing-unit;
+  padding: ($base-spacing-unit * 2);
 }

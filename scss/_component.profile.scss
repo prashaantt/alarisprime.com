@@ -52,3 +52,9 @@
     }
   }
 }
+
+.profile__note {
+  a {
+    @extend %link-minor;
+  }
+}

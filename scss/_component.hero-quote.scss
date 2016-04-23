@@ -5,7 +5,7 @@
 .hero-quote__inner {
   @include span-columns(12);
 
-  padding: ($base-spacing-unit * 4) $base-spacing-unit;
+  padding: ($base-spacing-unit * 4) ($base-spacing-unit * 2);
 
   color: $color-text-light;
 

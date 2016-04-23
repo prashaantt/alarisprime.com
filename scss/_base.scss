@@ -22,7 +22,7 @@ a,
   }
 }
 
-.link--minor {
+%link-minor {
   color: $color-text;
   box-shadow: 0 1px mix($color-highlight, $color-link, 50%);
   transition: color $base-transition-delay $base-transition-easing, box-shadow $base-transition-delay $base-transition-easing;
@@ -31,13 +31,17 @@ a,
     box-shadow: 0 1px mix($color-highlight, $color-link, 75%);
   }
 
-
   &:hover,
   &:active,
   &:focus {
+    color: $color-link-hover;
     text-shadow: 1px 1px $color-white;
     box-shadow: 0 1px $color-link, inset 0 -3px $color-link;
   }
+}
+
+.link--minor {
+  @extend %link-minor;
 }
 
 p {
@@ -58,6 +62,10 @@ blockquote {
       content: '—';
     }
   }
+}
+
+abbr {
+  font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
 }
 
 .caps-to-small-caps {
