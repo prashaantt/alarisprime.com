@@ -53,9 +53,6 @@ rules:
   class-name-format:
     - 2
     - convention: hyphenatedbem
-  placeholder-name-format:
-    - 2
-    - convention: hyphenatedbem
   function-name-format: 2
   id-name-format: 0
   mixin-name-format: 2
