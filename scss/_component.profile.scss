@@ -1,0 +1,54 @@
+.profile {
+  @include clearfix;
+
+  padding: $base-spacing-unit;
+
+  .profiles & {
+    @include bp(medium) {
+      float: left;
+      width: (100% / 2);
+    }
+
+    @include bp(large) {
+      float: left;
+      width: (100% / 3);
+    }
+  }
+}
+
+.profile__image-link,
+.profile__header {
+  margin-bottom: $base-spacing-unit;
+}
+
+.profile__image-link {
+  display: inline-block;
+}
+
+.profile__image {
+  display: block;
+  border-radius: 2000px;
+}
+
+.profile__header {
+  text-align: center;
+}
+
+.profile__networks {
+  font-size: 0;
+  font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
+
+  a {
+    font-size: strip-units(modular-scale(-1)) * 1rem;
+
+    &::after {
+      content: ' · ';
+    }
+
+    &:last-of-type {
+      &::after {
+        content: '';
+      }
+    }
+  }
+}

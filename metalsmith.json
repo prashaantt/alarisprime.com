@@ -11,6 +11,7 @@
     "metalsmith-in-place": {
       "engine": "nunjucks",
       "rename": true
-    }
+    },
+    "metalsmith-permalinks": {}
   }
 }

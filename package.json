@@ -7,7 +7,7 @@
     "clean": "rimraf dist",
     "preserve": "npm run clean",
     "serve": "npm-run-all --parallel server watch:*",
-    "watch:html": "watch 'npm run build:html' ./pages ./layouts ./includes",
+    "watch:html": "watch 'npm run build:html' ./pages ./layouts ./includes ./macros",
     "watch:js": "npm run build:js -- --watch",
     "watch:css": "npm-run-all build:css 'build:css -- -w -r'",
     "watch:images": "npm run build:images -- -w",

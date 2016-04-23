@@ -1,0 +1,17 @@
+.article {
+  @include outer-container;
+}
+
+.article__inner {
+  @include span-columns(12);
+  padding: ($base-spacing-unit * 2) $base-spacing-unit;
+}
+
+.article__title {
+  font-size: modular-scale(1);
+  color: $color-grey;
+}
+
+.article__header {
+  margin-bottom: ($base-spacing-unit * 2);
+}

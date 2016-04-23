@@ -1,0 +1,71 @@
+---
+title: The Team
+---
+
+{% from "./macros/img-srcset.njk" import profileImgSrcset %}
+
+{% extends "./layouts/base.njk" %}
+
+<title>{% block title %}{{ title }}{% endblock %}</title>
+
+{% block content %}
+{% include "./includes/header.njk" %}
+<article class="article">
+	<div class="article__inner">
+		<div class="article__header">
+			<h1 class="article__title">The Team</h1>
+		</div>
+		<div class="profiles">
+			<div class="profile">
+				<div class="profile__header">
+					<a href="" class="profile__image-link url">
+						{{ profileImgSrcset(class='profile__image photo', emailHash="01ec4a43ca2029d38ba8fafb5f02a3d5") }}
+					</a>
+					<h2 class="profile__name fn">Ankur Sethi</h2>
+					<nav class="profile__networks">
+						<a href="//twitter.com/GnrlMxms">Twitter</span></a> <a href="//ankursethi.in/" title="Website">Website</span></a>
+					</nav>
+				</div>
+				<div class="profile__note note">
+					<p>a­b­c­d­e­f­g­h­i­j­k­l­m­n­o­p­q­r­s­t­u­v­w­x­y­z­a­b­c­d­e­f­g­h­i­j­k­l­m­n­o­p­q­r­s­t­u­v­w­x­y­z­a­b­c­d­e­f­g­h­i­j­k­l­m­n­o­p­q­r­s­t­u­v­w­x­y­z­a­b­c­d­e­f­g­h­i­j­k­l­m­n­o­p­q­r­s­t­u­v­w­x­y­z­a­b­c­d­e­f­g­h­i­j­k­l­m­n­o­p­q­r­s­t­u­v­w­x­y­z­</p>
+					<p>a­b­c­d­e­f­g­h­i­j­k­l­m­n­o­p­q­r­s­t­u­v­w­x­y­z­a­b­c­d­e­f­g­h­i­j­k­l­m­n­o­p­q­r­s­t­u­v­w­x­y­z­a­b­c­d­e­f­g­h­i­j­k­l­m­n­o­p­q­r­s­t­u­v­w­x­y­z­a­b­c­d­e­f­g­h­i­j­k­l­m­n­o­p­q­r­s­t­u­v­w­x­y­z­a­b­c­d­e­f­g­h­i­j­k­l­m­n­o­p­q­r­s­t­u­v­w­x­y­z­</p>
+				</div>
+			</div>
+
+			<div class="profile vcard">
+				<div class="profile__header">
+					<a href="" class="profile__image-link url">
+						{{ profileImgSrcset(class='profile__image photo', emailHash="cfbad61c3b9bf96572aaa27e061bb80b") }}
+					</a>
+					<h2 class="profile__name fn">Brajeshwar Oinam</h2>
+					<nav class="profile__networks">
+						<a href="//www.linkedin.com/in/brajeshwar" title="LinkedIn">LinkedIn</span></a> <a href="//twitter.com/brajeshwar">Twitter</span></a> <a href="//brajeshwar.me" title="Website">Website</span></a>
+					</nav>
+				</div>
+				<div class="profile__note note">
+					<p>Brajeshwar is a seasoned Product Designer. He was part of the founding teams of four Startups – <a href="//www.crunchbase.com/company/mixercast">Mixercast</a>, <a href="//www.ocricket.com/">oCricket</a>, <a href="//infinitelybeta.com/">InfinitelyBeta</a> and <a href="//levoma.com/">Levoma</a>.</p>
+					<p>He also have experience consulting for many Startups and clients such as Disney, Adobe, <span class="sc">STARZ</span>, Obeo, <span class="sc">ILFS</span>, Salorix, Pearson Publishing, OnMobile, Edition Interactive, Tata Interactive Systems, <em>&c.</em></p>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="profile__header">
+					<a href="" class="profile__image-link url">
+						{{ profileImgSrcset(class='profile__image photo', emailHash="9c82428ae5e3a7b05fda89449fbb41d2") }}
+					</a>
+					<h2 class="profile__name fn">Saneef Ansari</h2>
+					<nav class="profile__networks">
+						<a href="//www.linkedin.com/in/saneef" title="LinkedIn">LinkedIn</span></a> <a href="//twitter.com/saneef">Twitter</span></a> <a href="//saneef.com" title="Website">Website</span></a>
+					</nav>
+				</div>
+				<div class="profile__note note">
+					<p>Saneef is an information and product designer. He runs a tiny design studio in Bangalore, helping start-ups around there.</p>
+					<p>He has previous worked with renowned design agency <a href="http://ia.net">iA</a>, Zürich. He is graduate from National Institute of Design, Bangalore.</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</article>
+{% include "./includes/footer.njk" %}
+{% endblock %}
