@@ -3,9 +3,9 @@
 }
 
 .hero__inner {
-  // @include span-columns(12);
+  @include clearfix;
 
-  padding: ($base-spacing-unit * 2) 0;
+  padding: ($base-spacing-unit * 2) $base-spacing-unit;
 }
 
 .hero__text-unit {
