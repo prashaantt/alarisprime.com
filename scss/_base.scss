@@ -46,10 +46,12 @@ a,
 
 p {
   margin-bottom: $base-spacing-unit;
+  font-feature-settings: $base-opentype-features, 'onum';
 }
 
 blockquote {
   font-size: modular-scale(1);
+  font-feature-settings: $base-opentype-features, 'dlig';
 
   cite {
     display: block;
