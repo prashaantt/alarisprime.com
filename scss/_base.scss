@@ -27,10 +27,6 @@ a,
   box-shadow: 0 1px mix($color-highlight, $color-link, 50%);
   transition: color $base-transition-delay $base-transition-easing, box-shadow $base-transition-delay $base-transition-easing;
 
-  @include bp(large) {
-    box-shadow: 0 1px mix($color-highlight, $color-link, 75%);
-  }
-
   &:hover,
   &:active,
   &:focus {
