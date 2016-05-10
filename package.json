@@ -33,6 +33,7 @@
     "gulp-sass": "^2.3.1",
     "gulp-sass-lint": "^1.1.1",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
     "gulp-xo": "^0.11.0",
     "imports-loader": "^0.6.5",
     "metalsmith": "2.1.0",
@@ -44,6 +45,7 @@
     "sanitize.css": "3.3.0",
     "turbolinks": "^5.0.0-beta4",
     "webfontloader": "1.6.24",
+    "webpack": "^1.13.0",
     "webpack-stream": "^3.2.0"
   }
 }

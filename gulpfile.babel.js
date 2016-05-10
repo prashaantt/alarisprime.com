@@ -3,7 +3,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 
 import del from 'del';
 import runSequence from 'run-sequence';
-import webpack from 'webpack-stream';
+import webpack from 'webpack';
 import browserSync from 'browser-sync';
 
 const $ = gulpLoadPlugins();
@@ -29,13 +29,17 @@ gulp.task('metalsmith', () => {
 		.pipe(gulp.dest('dist'));
 });
 
-gulp.task('scripts', () => {
-	// In future use http://webpack.github.io/docs/usage-with-gulp.html#normal-compilation
-	// the source script is not use. Webpack uses webpack.config.js
-	return gulp.src('scripts/entry.js')
-		.pipe($.plumber())
-		.pipe(webpack(require('./webpack.config.js')))
-		.pipe(gulp.dest('dist/scripts/'));
+const webpackConfig = require('./webpack.config');
+
+gulp.task('scripts', (cb) => {
+	webpack(webpackConfig, function (err, stats) {
+		if (err) {
+			throw new $.util.PluginError('webpack', err);
+		}
+
+		$.util.log('[webpack]', stats.toString());
+		cb();
+	});
 });
 
 gulp.task('stylesheets', () => {
