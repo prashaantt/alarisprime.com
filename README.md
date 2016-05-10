@@ -16,11 +16,11 @@
 
 ### Develoment server
 
-Run `npm run serve` to run the development build, watch for changes and serve locally.
+Run `gulp serve` to run the development build, watch for changes and serve locally.
 
 ### Build
 
-`npm run build` to build the website for production.
+`gulp` to build the website for production.
 
 ### Deploy
 
