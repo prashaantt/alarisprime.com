@@ -1,18 +1,12 @@
 module.exports = {
-	entry: {
-		vendor: [
-			'turbolinks'
-		],
-		project: "./scripts/entry.js"
-	},
+	entry: './scripts/entry.js',
 	output: {
-		path: "./dist/scripts/",
-		filename: "bundle.js"
+		filename: 'bundle.js'
 	},
 	module: {
 		loaders: [
-			{ test: /\.js$/, loaders: ['babel-loader'] },
-			{ test: require.resolve('turbolinks'), loader: 'imports?this=>window' }
+			{test: /\.js$/, loaders: ['babel-loader']},
+			{test: require.resolve('turbolinks'), loader: 'imports?this=>window'}
 		]
 	}
 };
