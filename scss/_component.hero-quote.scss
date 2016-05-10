@@ -9,17 +9,22 @@
 
   color: $color-text-light;
 
-  a {
-    color: $color-text-light;
-  }
-
   @include bp(medium) {
     @include span-columns(8);
-
-    font-size: modular-scale(1);
   }
 
   @include bp(large) {
     @include span-columns(6);
+  }
+
+  a {
+    color: $color-text-light;
+  }
+
+  blockquote {
+    @include bp(medium) {
+      font-size: modular-scale(2);
+      line-height: 1.2803268632273241; // = 1.75 * $base-spacing-unit
+    }
   }
 }
