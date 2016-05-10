@@ -5,6 +5,7 @@ import del from 'del';
 import runSequence from 'run-sequence';
 import webpack from 'webpack';
 import browserSync from 'browser-sync';
+import through2 from 'through2';
 
 const $ = gulpLoadPlugins();
 
@@ -56,13 +57,21 @@ gulp.task('stylesheets', () => {
 		.pipe(gulp.dest('dist/css/'));
 });
 
-gulp.task('copyStatic', () => {
+gulp.task('copy:root', () => {
 	return gulp.src([
-		'images/**/*',
 		'root/**/*'
 	])
 	.pipe(gulp.dest('dist'));
 });
+
+gulp.task('copy:images', () => {
+	return gulp.src([
+		'images/**/*'
+	])
+	.pipe(gulp.dest('dist/images'));
+});
+
+gulp.task('copy', ['copy:root', 'copy:images']);
 
 gulp.task('lint:scripts', () => {
 	return gulp.src([
@@ -82,15 +91,70 @@ gulp.task('lint:stylesheets', () => {
 
 gulp.task('lint', ['lint:scripts', 'lint:stylesheets']);
 
-gulp.task('build', cb => {
+gulp.task('useref', () => {
+	const userefConfig = {
+		searchPath: ['dist', '.']
+	};
+
+	return gulp.src('dist/**/*.html')
+		.pipe($.useref(userefConfig))
+		.pipe($.if('*.js', $.uglify()))
+		.pipe($.if('*.css', $.cssnano()))
+		.pipe($.if('*.html', $.htmlmin({
+			removeComments: true,
+			cleanConditionalComment: false,
+			collapseWhitespace: true,
+			conservativeCollapse: true,
+			collapseBooleanAttributes: true
+		})))
+		.pipe(gulp.dest('dist'));
+});
+
+gulp.task('assets-rev', () => {
+	return gulp.src([
+		'./dist/images/*',
+		'./dist/scripts/*.js',
+		'./dist/css/*.css'
+	], {base: './dist/'})
+	.pipe($.rev())
+	.pipe(gulp.dest('./dist/'))
+	.pipe($.rev.manifest())
+	.pipe(gulp.dest('./dist/'))
+	.pipe(through2.obj((file, enc, next) => {
+		let manifest = require(file.path);
+		let paths = Object.keys(manifest).map(x => './dist/' + x);
+
+		del.sync(paths);
+
+		next(null, file);
+	}));
+});
+
+gulp.task('assets-rev-replace', ['assets-rev'], () => {
+	let manifest = gulp.src('./dist/rev-manifest.json');
+
+	return gulp.src([
+		'./dist/**'
+	])
+	.pipe($.revReplace({
+		manifest: manifest,
+		replaceInExtensions: ['.js', '.css', '.html', '.xml']
+	}))
+	.pipe(gulp.dest('dist'));
+});
+
+gulp.task('build-core', cb => {
 	return runSequence(
-		['clean', 'lint'],
-		['metalsmith', 'scripts', 'stylesheets', 'copyStatic'],
+		['metalsmith', 'scripts', 'stylesheets', 'copy'],
 		cb
 	);
 });
 
-gulp.task('serve', ['build'], () => {
+gulp.task('postbuild:cleanup', () => {
+	del.sync(['./dist/rev-manifest.json']);
+});
+
+gulp.task('serve', ['build-core'], () => {
 	browserSync({
 		server: {
 			baseDir: ['dist/'],
@@ -117,7 +181,7 @@ gulp.task('serve', ['build'], () => {
 	gulp.watch([
 		'images/**/*',
 		'root/**/*'
-	], ['copyStatic']);
+	], ['copy']);
 
 	gulp.watch([
 		'scripts/**/*.js',
@@ -129,6 +193,17 @@ gulp.task('serve', ['build'], () => {
 	gulp.watch([
 		'dist/**/*'
 	]).on('change', browserSync.reload);
+});
+
+gulp.task('build', cb => {
+	return runSequence(
+		['clean', 'lint'],
+		['build-core'],
+		['useref'],
+		['assets-rev-replace'],
+		['postbuild:cleanup'],
+		cb
+	);
 });
 
 gulp.task('default', () => {
