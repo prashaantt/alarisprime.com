@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/alarisprime/alarisprime.git"
+    "url": "git+ssh://git@gitlab.com:alarisprime/alarisprime.git"
   },
   "contributors": [
     "Saneef Ansari <s@alarisprime.com> (https://saneef.com/)",
     "Brajeshwar Oinam <b@alarisprime.com> (https://brajeshwar.me/)"
   ],
-  "license": "UNLICENSED",
+  "license": "CC0 1.0 Universal",
   "homepage": "https://alarisprime.com",
   "dependencies": {
     "autoprefixer": "^6.3.6",
