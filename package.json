@@ -1,7 +1,7 @@
 {
   "name": "alarisprime.com",
   "version": "3.0.0",
-  "description": "The website for Alaris Prime LLC",
+  "description": "The website for Alaris Prime",
   "private": true,
   "scripts": {
     "deploy": "gulp build && s3_website push"
