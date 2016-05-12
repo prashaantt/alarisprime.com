@@ -31,8 +31,8 @@ a,
   &:active,
   &:focus {
     color: $color-link-hover;
-    text-shadow: 1px 1px $color-white;
-    box-shadow: 0 1px $color-link, inset 0 -3px $color-link;
+    text-shadow: 1px 1px $color-white, -1px 1px $color-white, 1px -1px $color-white, -1px -1px $color-white;
+    box-shadow: 0 1px $color-link, inset 0 -.15em $color-link; // 4px / 20px
   }
 }
 
