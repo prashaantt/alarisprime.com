@@ -27,8 +27,7 @@ gulp.task('metalsmith', () => {
 				require('metalsmith-permalinks')()
 			]
 		}))
-		.pipe(gulp.dest('dist'))
-		.pipe(browserSync.reload({stream: true}));
+		.pipe(gulp.dest('dist'));
 });
 
 const webpackConfig = require('./webpack.config');
@@ -56,8 +55,7 @@ gulp.task('stylesheets', () => {
 		}).on('error', $.sass.logError))
 		.pipe($.postcss([require('autoprefixer')]))
 		.pipe($.sourcemaps.write())
-		.pipe(gulp.dest('dist/css/'))
-		.pipe(browserSync.reload({stream: true}));
+		.pipe(gulp.dest('dist/css/'));
 });
 
 gulp.task('copy:root', () => {
@@ -71,8 +69,7 @@ gulp.task('copy:images', () => {
 	return gulp.src([
 		'images/**/*'
 	])
-	.pipe(gulp.dest('dist/images'))
-	.pipe(browserSync.reload({stream: true}));
+	.pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('copy', ['copy:root', 'copy:images']);
