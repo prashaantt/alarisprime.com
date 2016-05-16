@@ -74,6 +74,19 @@ gulp.task('copy:images', () => {
 
 gulp.task('copy', ['copy:root', 'copy:images']);
 
+gulp.task('sitemap', function () {
+	gulp.src('dist/**/*.html', {
+		read: false
+	})
+	.pipe($.sitemap({
+		siteUrl: siteConfig.baseUrl,
+		lastmod: false,
+		changefreq: 'weekly',
+		priority: 0.5
+	}))
+	.pipe(gulp.dest('./dist'));
+});
+
 gulp.task('lint:scripts', () => {
 	return gulp.src([
 		'scripts/**/*.js',
@@ -200,6 +213,7 @@ gulp.task('build', cb => {
 	return runSequence(
 		['clean', 'lint'],
 		['build-core'],
+		['sitemap'],
 		['useref'],
 		['assets-rev-replace'],
 		['postbuild:cleanup'],
