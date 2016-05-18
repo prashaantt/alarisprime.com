@@ -24,6 +24,7 @@ gulp.task('metalsmith', () => {
 					engine: 'nunjucks',
 					rename: true
 				}),
+				require('metalsmith-hyphenate')(),
 				require('metalsmith-permalinks')()
 			]
 		}))
