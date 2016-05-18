@@ -8,10 +8,14 @@
 }
 
 .organisation {
-  width: (100% / 3);
+  width: (100% / 2);
   text-align: center;
 
   @include bp(medium) {
+    width: (100% / 3);
+  }
+
+  @include bp(large) {
     width: (100% / 6);
   }
 }
