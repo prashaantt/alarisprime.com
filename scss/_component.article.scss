@@ -4,14 +4,35 @@
 
 .article__inner {
   @include span-columns(12);
-  padding: ($base-spacing-unit * 2);
+  padding: ($base-spacing-unit * 4) ($base-spacing-unit * 2);
 }
 
 .article__title {
+  display: inline-block;
   font-size: modular-scale(1);
+  font-weight: normal;
   color: $color-grey;
+  background-color: $color-white;
+  box-shadow: (-1 * $base-spacing-unit / 2) 0 $color-white, ($base-spacing-unit / 2) 0 $color-white;
+  font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
 }
 
 .article__header {
+  position: relative;
   margin-bottom: ($base-spacing-unit * 2);
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    top: 1.1em; // 22px / 20px
+    right: 21.87359369%;
+    left: 21.87359369%;
+    z-index: -1;
+
+    display: block;
+    height: 1px;
+    background-color: $base-border-color;
+
+    content: ' ';
+  }
 }

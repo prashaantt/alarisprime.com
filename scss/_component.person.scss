@@ -1,4 +1,4 @@
-.profile {
+.person {
   @include clearfix;
 
   padding: $base-spacing-unit;
@@ -16,31 +16,31 @@
   }
 }
 
-.profile__image-holder,
-.profile__header {
+.person__image-holder,
+.person__header {
   margin-bottom: $base-spacing-unit;
 }
 
-.profile__image-holder {
+.person__image-holder {
   position: relative;
   display: inline-block;
 }
 
-.profile__image {
+.person__image {
   display: block;
   border-radius: 2000px;
   filter: brightness(150%) grayscale(100%);
 }
 
-.profile__image--already-bw {
+.person__image--already-bw {
   filter: brightness(105%) grayscale(100%);
 }
 
-.profile__header {
+.person__header {
   text-align: center;
 }
 
-.profile__networks {
+.person__networks {
   font-size: 0;
   font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
 
@@ -59,7 +59,7 @@
   }
 }
 
-.profile__note {
+.person__note {
   a {
     @extend %link-minor;
   }

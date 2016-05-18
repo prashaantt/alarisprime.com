@@ -1,0 +1,36 @@
+.organisations {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.organisation {
+  width: (100% / 3);
+  text-align: center;
+
+  @include bp(medium) {
+    width: (100% / 6);
+  }
+}
+
+.organisation__logo-link {
+  display: inline-block;
+  width: $base-spacing-unit * 10.55555556; // 16:9 of line height
+  line-height: $base-spacing-unit * 5;
+  text-align: center;
+  opacity: .3;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1;
+  }
+}
+
+.organisation__logo {
+  display: inline-block;
+  vertical-align: middle;
+}
