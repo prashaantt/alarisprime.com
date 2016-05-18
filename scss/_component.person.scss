@@ -1,16 +1,29 @@
+.people {
+  @include clearfix;
+
+  display: flex;
+  margin-right: -1 * $base-spacing-unit;
+  margin-left: -1 * $base-spacing-unit;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+}
+
 .person {
   @include clearfix;
 
   padding: $base-spacing-unit;
+  margin-bottom: $base-spacing-unit * 2;
 
-  .profiles & {
+  .people & {
     @include bp(medium) {
-      float: left;
       width: (100% / 2);
     }
 
     @include bp(large) {
-      float: left;
       width: (100% / 3);
     }
   }
