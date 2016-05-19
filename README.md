@@ -1,6 +1,6 @@
 # alarisprime.com
 
-![Master branch build status](https://gitlab.com/alarisprime/alarisprime/badges/master/build.svg)
+[![Master branch build status](https://gitlab.com/alarisprime/alarisprime/badges/master/build.svg)](https://gitlab.com/alarisprime/alarisprime/builds)
 
 ## Development
 
