@@ -1,5 +1,7 @@
 # alarisprime.com
 
+![Master branch build status](https://gitlab.com/alarisprime/alarisprime/badges/master/build.svg)
+
 ## Development
 
 `npm i` to install npm packages.
