@@ -25,6 +25,8 @@
 
     @include bp(large) {
       width: (100% / 3);
+      margin-right: 8.333333335%;
+      margin-left: 8.333333335%;
     }
   }
 }
