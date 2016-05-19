@@ -7,4 +7,4 @@ build_test:
   stage: build
   script:
    - npm install
-   - gulp build
+   - npm run build
