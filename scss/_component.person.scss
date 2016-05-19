@@ -47,8 +47,12 @@
   filter: brightness(150%) grayscale(100%);
 }
 
-.person__image--already-bw {
+.person__image--less-bright {
   filter: brightness(105%) grayscale(100%);
+}
+
+.person__image--more-bright {
+  filter: brightness(165%) grayscale(100%);
 }
 
 .person__header {
