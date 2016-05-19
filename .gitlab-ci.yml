@@ -1,0 +1,10 @@
+image: node:5.7.0
+
+stages:
+  - build
+
+build_test:
+  stage: build
+  script:
+   - npm install
+   - gulp build
