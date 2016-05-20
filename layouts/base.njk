@@ -17,8 +17,12 @@
 		<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
 	</head>
 	<body>
+		{% include "../includes/header.njk" %}
+
 		{% block content %}
 		{% endblock %}
+
+		{% include "../includes/footer.njk" %}
 
 		<!-- build:js /scripts/bundle.js data-turbolinks-track="reload" async -->
 		<script src="/scripts/bundle.js" async></script>
