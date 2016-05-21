@@ -1,5 +1,7 @@
 # alarisprime.com
 
+[![Build Status](https://travis-ci.org/alarisprime/alarisprime.com.svg?branch=master)](https://travis-ci.org/alarisprime/alarisprime.com)
+
 ## Development
 
 `npm i` to install npm packages.
