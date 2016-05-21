@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "deploy": "gulp build && s3_website push",
-    "build": "gulp build"
+    "build": "gulp build",
+    "test": "npm run build"
   },
   "repository": {
     "type": "git",
