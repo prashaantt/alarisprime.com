@@ -1,6 +1,7 @@
 # alarisprime.com
 
-[![Build Status](https://travis-ci.org/alarisprime/alarisprime.com.svg?branch=master)](https://travis-ci.org/alarisprime/alarisprime.com)
+[![Build Status](https://travis-ci.org/alarisprime/alarisprime.com.svg?branch=master)](https://travis-ci.org/alarisprime/alarisprime.com) [![Dependency Status](https://gemnasium.com/badges/github.com/alarisprime/alarisprime.com.svg)](https://gemnasium.com/github.com/alarisprime/alarisprime.com)
+
 
 ## Development
 
