@@ -22,7 +22,12 @@ gulp.task('metalsmith', () => {
 				}),
 				require('metalsmith-in-place')({
 					engine: 'nunjucks',
-					rename: true
+					rename: true,
+					settings: {
+						views: {
+							noCache: true
+						}
+					}
 				}),
 				require('metalsmith-hyphenate')(),
 				require('metalsmith-permalinks')()
@@ -101,7 +106,7 @@ gulp.task('lint:stylesheets', () => {
 		'scss/**/*.scss'
 	])
 	.pipe($.sassLint())
-  .pipe($.sassLint.format());
+	.pipe($.sassLint.format());
 });
 
 gulp.task('lint', ['lint:scripts', 'lint:stylesheets']);
@@ -184,7 +189,8 @@ gulp.task('serve', ['build-core'], () => {
 					return '<body data-turbolinks="false"';
 				}
 			}
-		]
+		],
+		reloadDelay: 500
 	});
 
 	gulp.watch([
