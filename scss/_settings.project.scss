@@ -22,7 +22,7 @@ $base-line-height: 26px; // $root-line-height * $root-font-size
 $base-spacing-unit: rem($base-line-height / 2);
 
 // Border
-$base-border-color: mix($color-highlight, $color-grey-lighter, 15%);
+$base-border-color: mix($color-highlight, $color-grey-lighter, 30%);
 $base-border-width: 1px;
 $base-border: $base-border-width solid $base-border-color;
 
