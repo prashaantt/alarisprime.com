@@ -41,6 +41,13 @@ a,
   @extend %link-minor;
 }
 
+%indented-paragraphs {
+  & + & {
+    margin-top: -1 * $base-spacing-unit;
+    text-indent: $base-spacing-unit * 1.5;
+  }
+}
+
 p {
   margin-bottom: $base-spacing-unit;
   font-feature-settings: $base-opentype-features, 'onum';

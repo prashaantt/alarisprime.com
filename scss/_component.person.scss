@@ -18,6 +18,10 @@
   padding: $base-spacing-unit;
   margin-bottom: $base-spacing-unit * 2;
 
+  p {
+    @extend %indented-paragraphs;
+  }
+
   .people & {
     @include bp(medium) {
       width: (100% / 2);
