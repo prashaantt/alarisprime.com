@@ -12,24 +12,27 @@
 .footer__content,
 .footer__legal {
   @include bp(medium) {
-    @include span-columns(6);
-
     color: $color-text-light;
+  }
+}
+
+.footer__content {
+  @include bp(medium) {
+    @include span-columns(6);
   }
 }
 
 .footer__legal {
   font-size: modular-scale(-1);
 
-  @include bp(medium) {
-    text-align: right;
-  }
-
   .footer__content + & {
+    @include span-columns(6);
+
     margin-top: $base-spacing-unit;
 
     @include bp(medium) {
       margin-top: 0;
+      text-align: right;
     }
   }
 }
