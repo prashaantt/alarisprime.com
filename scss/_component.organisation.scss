@@ -22,8 +22,8 @@
 
 .organisation__logo-link {
   display: inline-block;
-  width: $base-spacing-unit * 10.55555556; // 16:9 of line height
-  line-height: $base-spacing-unit * 5;
+  width: $base-vertical-spacing-unit * 10.55555556; // 16:9 of line height
+  line-height: $base-vertical-spacing-unit * 5;
   text-align: center;
   opacity: .3;
 

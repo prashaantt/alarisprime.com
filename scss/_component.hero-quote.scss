@@ -5,7 +5,7 @@
 .hero-quote__inner {
   @include span-columns(12);
 
-  padding: ($base-spacing-unit * 4) ($base-spacing-unit * 2);
+  padding: ($base-vertical-spacing-unit * 4) ($base-horizontal-spacing-unit * 2);
 
   color: $color-text-light;
 
@@ -24,7 +24,7 @@
   blockquote {
     @include bp(medium) {
       font-size: modular-scale(2);
-      line-height: 1.2803268632273241; // = 1.75 * $base-spacing-unit
+      line-height: 1.2803268632273241; // = 1.75 * $base-vertical-spacing-unit
     }
   }
 }

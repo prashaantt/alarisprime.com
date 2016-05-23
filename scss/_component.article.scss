@@ -4,7 +4,7 @@
 
 .article__inner {
   @include span-columns(12);
-  padding: ($base-spacing-unit * 2) ($base-spacing-unit * 2);
+  padding: ($base-vertical-spacing-unit * 2) ($base-horizontal-spacing-unit * 2);
 }
 
 .article__title {
@@ -13,13 +13,13 @@
   font-weight: normal;
   color: $color-grey;
   background-color: $color-white;
-  box-shadow: (-1 * $base-spacing-unit) 0 $color-white, ($base-spacing-unit) 0 $color-white;
+  box-shadow: (-1 * $base-vertical-spacing-unit) 0 $color-white, ($base-vertical-spacing-unit) 0 $color-white;
   font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
 }
 
 .article__header {
   position: relative;
-  margin-bottom: ($base-spacing-unit * 2);
+  margin-bottom: ($base-vertical-spacing-unit * 2);
   text-align: center;
 
   &::after {

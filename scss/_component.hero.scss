@@ -5,13 +5,13 @@
 .hero__inner {
   @include clearfix;
 
-  padding: ($base-spacing-unit * 2) $base-spacing-unit;
+  padding: ($base-vertical-spacing-unit * 2) $base-horizontal-spacing-unit;
 }
 
 .hero__text-unit {
   @include span-columns(12);
 
-  padding: 0 $base-spacing-unit;
+  padding: 0 $base-horizontal-spacing-unit;
 
   @include bp(medium) {
     @include span-columns(8);

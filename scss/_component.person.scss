@@ -2,8 +2,8 @@
   @include clearfix;
 
   display: flex;
-  margin-right: -1 * $base-spacing-unit;
-  margin-left: -1 * $base-spacing-unit;
+  margin-right: -1 * $base-horizontal-spacing-unit;
+  margin-left: -1 * $base-horizontal-spacing-unit;
 
   flex-direction: row;
   flex-wrap: wrap;
@@ -15,8 +15,8 @@
 .person {
   @include clearfix;
 
-  padding: $base-spacing-unit;
-  margin-bottom: $base-spacing-unit * 2;
+  padding: $base-vertical-spacing-unit $base-horizontal-spacing-unit;
+  margin-bottom: $base-vertical-spacing-unit * 2;
 
   p {
     @extend %indented-paragraphs;
@@ -37,7 +37,7 @@
 
 .person__image-holder,
 .person__header {
-  margin-bottom: $base-spacing-unit;
+  margin-bottom: $base-vertical-spacing-unit;
 }
 
 .person__image-holder {

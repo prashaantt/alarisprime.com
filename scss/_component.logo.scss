@@ -1,6 +1,6 @@
 .logo {
   display: inline-block;
-  height: $base-spacing-unit * 1.461538462; // 19px / 13px
+  height: $base-vertical-spacing-unit * 1.461538462; // 19px / 13px
 
   svg {
     display: block;
@@ -10,7 +10,7 @@
 }
 
 .logo--tiny {
-  height: $base-spacing-unit * .846153846; // 11px / 13px
+  height: $base-vertical-spacing-unit * .846153846; // 11px / 13px
   vertical-align: baseline;
 }
 
