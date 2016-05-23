@@ -1,4 +1,5 @@
 html {
+  text-rendering: geometricPrecision;
   font-feature-settings: $base-opentype-features;
 
   &.wf-active {
