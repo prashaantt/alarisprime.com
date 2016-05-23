@@ -3,10 +3,33 @@
 }
 
 .footer__inner {
-  @include span-columns(12);
+  @include clearfix;
 
   padding: ($base-spacing-unit * 2);
+  border-top: $base-border;
+}
 
+.footer__content,
+.footer__legal {
+  @include bp(medium) {
+    @include span-columns(6);
+
+    color: $color-text-light;
+  }
+}
+
+.footer__legal {
   font-size: modular-scale(-1);
-  color: $color-text-light;
+
+  @include bp(medium) {
+    text-align: right;
+  }
+
+  .footer__content + & {
+    margin-top: $base-spacing-unit;
+
+    @include bp(medium) {
+      margin-top: 0;
+    }
+  }
 }
