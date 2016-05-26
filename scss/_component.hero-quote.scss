@@ -26,5 +26,15 @@
       font-size: modular-scale(2);
       line-height: 1.2803268632273241; // = 1.75 * $base-vertical-spacing-unit
     }
+
+    p {
+      &:first-of-type {
+        &::before {
+          @include bp(medium) {
+            left: .126625734em; // 4.5px / 35.5378px
+          }
+        }
+      }
+    }
   }
 }

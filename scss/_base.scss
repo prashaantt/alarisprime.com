@@ -55,8 +55,29 @@ p {
 }
 
 blockquote {
+  position: relative;
+  padding-left: ($base-horizontal-spacing-unit);
+  margin-left: -1 * ($base-horizontal-spacing-unit);
   font-size: modular-scale(1);
   font-feature-settings: $base-opentype-features, 'dlig';
+
+  p {
+    &:first-of-type {
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 2 * .126625734em; // 4.5px / 35.5378px
+
+        content: open-quote;
+      }
+    }
+
+    &:last-of-type {
+      &::after {
+        content: close-quote;
+      }
+    }
+  }
 
   cite {
     display: block;
