@@ -20,21 +20,37 @@
   a {
     color: $color-text-light;
   }
+}
 
-  blockquote {
-    @include bp(medium) {
-      font-size: modular-scale(2);
-      line-height: 1.2803268632273241; // = 1.75 * $base-vertical-spacing-unit
-    }
+.hero-quote__quote {
+  position: relative;
+  padding-left: ($base-horizontal-spacing-unit);
+  margin-left: -1 * ($base-horizontal-spacing-unit);
 
-    p {
-      &:first-of-type {
-        &::before {
-          @include bp(medium) {
-            left: .126625734em; // 4.5px / 35.5378px
-          }
-        }
+  @include bp(medium) {
+    font-size: modular-scale(2);
+    line-height: 1.2803268632273241; // = 1.75 * $base-vertical-spacing-unit
+  }
+}
+
+.hero-quote__line {
+  &:first-of-type {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 2 * .126625734em; // 4.5px / 35.5378px
+
+      content: open-quote;
+
+      @include bp(medium) {
+        left: .126625734em; // 4.5px / 35.5378px
       }
+    }
+  }
+
+  &:last-of-type {
+    &::after {
+      content: close-quote;
     }
   }
 }
