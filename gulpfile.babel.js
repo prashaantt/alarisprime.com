@@ -53,7 +53,7 @@ gulp.task('stylesheets', () => {
 	return gulp.src('scss/**/*.scss')
 		.pipe($.plumber())
 		.pipe($.sourcemaps.init())
-		.pipe($.if('bundle.scss', $.insert.prepend(`$site-brand-color: ${siteConfig['brand-color']};`)))
+		.pipe($.if('bundle.scss', $.insert.prepend(`$site-brand-color: ${siteConfig.brandColor};`)))
 		.pipe($.sass.sync({
 			outputStyle: 'expanded',
 			precision: 10,

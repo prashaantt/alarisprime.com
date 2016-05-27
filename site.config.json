@@ -1,5 +1,7 @@
 {
   "title": "Alaris Prime",
   "baseUrl": "https://alarisprime.com",
-  "brand-color": "#00a86b"
+  "brandColor": "#00a86b",
+  "newsletterSignupUrl": "http://eepurl.com/b3rqBH",
+  "contactEmail": "hello@alarisprime.com"
 }
