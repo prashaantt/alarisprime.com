@@ -1,8 +1,10 @@
+{% from "../macros/contact-mailto-tag.njk" import contactMailtoTag %}
+
 <div class="footer">
 	<div class="footer__inner">
 		{% if not hideContactOnFooter %}
 		<div class="footer__content">
-			Like to work with us? <a class="link link--minor" href="mailto:hello@alarisprime.com?Subject=Work with Alaris Prime&Body=Hello Alaris Prime,<br><br>I’m interested in ______.<br><br>How do we proceed?">Write to us</a>.
+			Like to work with us? {{ contactMailtoTag(text = 'Write to us', email = site.contactEmail) }}.
 		</div>
 		{% endif %}
 		<div class="footer__legal">&copy; 2016 Alaris Prime</div>

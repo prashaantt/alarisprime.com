@@ -4,6 +4,8 @@ hideContactOnFooter: true
 
 {% extends "./layouts/base.njk" %}
 
+{% from "./macros/contact-mailto-tag.njk" import contactMailtoTag %}
+
 {% block metaDescription %}<meta name="description" content="We help businesses every step of the way in building beautiful and performant products.">{% endblock %}
 
 {% block content %}
@@ -36,7 +38,7 @@ hideContactOnFooter: true
 				and many more.
 			</p>
 			<br>
-			<p>Want us to help? <a href="https://alarisprime.typeform.com/to/DOKsdB">Let’s discuss</a>.</p>
+			<p>Want us to help? {{ contactMailtoTag(text = 'Write to us', email = site.contactEmail) }}.</p>
 		</div>
 	</div>
 </div>
