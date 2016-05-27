@@ -5,12 +5,15 @@
 .hero-quote__inner {
   @include span-columns(12);
 
-  padding: ($base-vertical-spacing-unit * 4) ($base-horizontal-spacing-unit * 2);
+  padding: ($base-vertical-spacing-unit * 2) ($base-horizontal-spacing-unit * 2);
 
   color: $color-text-light;
 
   @include bp(medium) {
     @include span-columns(8);
+
+    padding-top: ($base-vertical-spacing-unit * 4);
+    padding-bottom: ($base-vertical-spacing-unit * 4);
   }
 
   @include bp(large) {
