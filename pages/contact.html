@@ -3,9 +3,9 @@ title: Contact
 hideContactOnFooter: true
 ---
 
-{% extends "./layouts/base.njk" %}
+{% extends "./layouts/base.html" %}
 
-{% from "./macros/contact-mailto-tag.njk" import contactMailtoTag %}
+{% from "./macros/contact-mailto-tag.html" import contactMailtoTag %}
 
 <title>{% block title %}{{ title }}{% endblock %}</title>
 

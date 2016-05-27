@@ -14,12 +14,14 @@ const siteConfig = require('./site.config.json');
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('metalsmith', () => {
-	return gulp.src('pages/**/*.njk')
+	return gulp.src('pages/**/*.html')
 		.pipe($.metalsmith({
 			use: [
 				require('metalsmith-define')({
-					site: siteConfig
+					site: siteConfig,
+					console: console
 				}),
+				require('metalsmith-permalinks')(),
 				require('metalsmith-in-place')({
 					engine: 'nunjucks',
 					rename: true,
@@ -29,8 +31,7 @@ gulp.task('metalsmith', () => {
 						}
 					}
 				}),
-				require('metalsmith-hyphenate')(),
-				require('metalsmith-permalinks')()
+				require('metalsmith-hyphenate')()
 			]
 		}))
 		.pipe(gulp.dest('dist'));
@@ -194,10 +195,10 @@ gulp.task('serve', ['build-core'], () => {
 	});
 
 	gulp.watch([
-		'pages/**/*.njk',
-		'includes/**/*.njk',
-		'macros/**/*.njk',
-		'layouts/**/*.njk'
+		'pages/**/*.html',
+		'includes/**/*.html',
+		'macros/**/*.html',
+		'layouts/**/*.html'
 	], ['metalsmith']);
 
 	gulp.watch([
