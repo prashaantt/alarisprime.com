@@ -196,6 +196,7 @@ gulp.task('serve', ['build-core'], () => {
 	gulp.watch([
 		'pages/**/*.njk',
 		'includes/**/*.njk',
+		'macros/**/*.njk',
 		'layouts/**/*.njk'
 	], ['metalsmith']);
 
