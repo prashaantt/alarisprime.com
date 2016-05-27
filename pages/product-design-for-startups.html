@@ -1,0 +1,24 @@
+---
+title: Product Design for Startups
+---
+
+{% extends "./layouts/base.html" %}
+
+{% from "./macros/contact-mailto-tag.html" import contactMailtoTag %}
+
+<title>{% block title %}{{ title }}{% endblock %}</title>
+
+{% block content %}
+<article class="article article--min-height">
+	<div class="article__inner">
+		<div class="article__header">
+			<h1 class="article__title">Product Design Turnkey Solutions for Startups</h1>
+		</div>
+		<div class="article__content">
+			<p>Alaris Prime offer a complete turnkey solutions – Design and Front-end Engineering requirements for your products.</p>
+			<p>Our team have extensive experience designing interfaces and experiences for mobile, web and the connected devices. We also have the capability to complete the product design with advanced front-end engineering – making it work across browsers, devices, screen-sizes, and even optimized for offline experiences, and more.</p>
+			<p>Want us to help your startup? {{ contactMailtoTag(text = 'Write to us', email = site.contactEmail, subject = 'Interested in Alaris Prime\'s Turnkey Solutions for startups') }}.</p>
+		</div>
+	</div>
+</article>
+{% endblock %}
