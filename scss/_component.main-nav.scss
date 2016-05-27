@@ -10,7 +10,7 @@
 
   a {
     margin-right: $base-horizontal-spacing-unit;
-    color: $color-text-lighter;
+    color: $color-text-light;
     font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
 
     &:hover,
@@ -20,7 +20,7 @@
     }
 
     &.active {
-      color: $color-text-light;
+      color: $color-text-lighter;
     }
   }
 }
