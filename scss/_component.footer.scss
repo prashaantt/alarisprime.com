@@ -12,7 +12,7 @@
 .footer__content,
 .footer__legal {
   @include bp(medium) {
-    color: $color-text-light;
+    color: $color-text-lighter;
   }
 }
 

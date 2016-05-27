@@ -10,6 +10,11 @@
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
+
+  @include bp(large) {
+    @include span-columns(9);
+    display: flex;
+  }
 }
 
 .person {
@@ -25,10 +30,6 @@
   .people & {
     @include bp(medium) {
       width: (100% / 2);
-    }
-
-    @include bp(large) {
-      width: (100% / 3);
     }
   }
 }

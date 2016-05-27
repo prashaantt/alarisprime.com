@@ -7,7 +7,7 @@
 
   padding: ($base-vertical-spacing-unit * 2) ($base-horizontal-spacing-unit * 2);
 
-  color: $color-text-light;
+  color: $color-text-lighter;
 
   @include bp(medium) {
     @include span-columns(9);
@@ -21,7 +21,7 @@
   }
 
   a {
-    color: $color-text-light;
+    color: $color-text-lighter;
   }
 }
 

@@ -1,0 +1,26 @@
+.main-nav {
+  margin-top: $base-vertical-spacing-unit;
+
+  @include bp(medium) {
+    display: inline-block;
+
+    padding: 0 $base-horizontal-spacing-unit;
+    margin-top: 0;
+  }
+
+  a {
+    margin-right: $base-horizontal-spacing-unit;
+    color: $color-text-lighter;
+    font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-text;
+    }
+
+    &.active {
+      color: $color-text-light;
+    }
+  }
+}

@@ -9,7 +9,8 @@ $color-shadow:       $root-color; // #0d1c0d;
 $color-highlight:    #f2f5f5;
 
 $color-text: $color-shadow;
-$color-text-light: $color-grey-light;
+$color-text-light: $color-grey;
+$color-text-lighter: $color-grey-light;
 
 $color-link: $color-brand;
 $color-link-hover: mix($color-shadow, $color-brand, 10%);

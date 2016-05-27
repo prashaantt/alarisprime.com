@@ -5,6 +5,11 @@
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
+
+  @include bp(large) {
+    @include span-columns(9);
+    display: flex;
+  }
 }
 
 .organisation {

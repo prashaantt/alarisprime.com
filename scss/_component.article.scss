@@ -13,7 +13,7 @@
 
   font-size: modular-scale(1);
   font-weight: normal;
-  color: $color-grey;
+  color: $color-text-light;
 
   background-color: $color-white;
   box-shadow: (-1 * $base-horizontal-spacing-unit / 2) 0 $color-white, ($base-horizontal-spacing-unit / 2) 0 $color-white;
@@ -46,10 +46,6 @@
 
   @include bp(medium) {
     @include span-columns(9);
-  }
-
-  @include bp(large) {
-    @include span-columns(6);
   }
 }
 
