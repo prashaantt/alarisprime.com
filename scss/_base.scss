@@ -30,6 +30,13 @@ a,
   }
 }
 
+[rel='external'] {
+  &:after {
+    font-size: modular-scale(-2);
+    content: '↗';
+  }
+}
+
 %link-minor {
   color: currentColor;
   box-shadow: 0 1px mix($color-highlight, $color-link, 50%);
