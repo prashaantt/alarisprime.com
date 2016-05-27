@@ -14,7 +14,7 @@
   padding: 0 $base-horizontal-spacing-unit;
 
   @include bp(medium) {
-    @include span-columns(8);
+    @include span-columns(9);
   }
 
   @include bp(large) {

@@ -10,7 +10,7 @@
   color: $color-text-light;
 
   @include bp(medium) {
-    @include span-columns(8);
+    @include span-columns(9);
 
     padding-top: ($base-vertical-spacing-unit * 4);
     padding-bottom: ($base-vertical-spacing-unit * 4);
