@@ -50,7 +50,7 @@
 }
 
 .article--min-height {
-  height: #{(100 * 2 / 3)}vh;
+  min-height: #{(100 * 2 / 3)}vh;
 }
 
 .article--wide {
