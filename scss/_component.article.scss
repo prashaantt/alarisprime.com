@@ -40,3 +40,19 @@
     content: ' ';
   }
 }
+
+.article__content {
+  @include span-columns(12);
+
+  @include bp(medium) {
+    @include span-columns(9);
+  }
+
+  @include bp(large) {
+    @include span-columns(6);
+  }
+}
+
+.article--min-height {
+  height: #{(100 * 2 / 3)}vh;
+}

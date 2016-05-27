@@ -3,5 +3,7 @@
   "baseUrl": "https://alarisprime.com",
   "brandColor": "#00a86b",
   "newsletterSignupUrl": "http://eepurl.com/b3rqBH",
+  "twitterUrl": "https://twitter.com/alarisprime",
+  "facebookUrl": "https://www.facebook.com/alarisprime",
   "contactEmail": "hello@alarisprime.com"
 }
