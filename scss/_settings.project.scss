@@ -18,7 +18,7 @@ $color-link-hover: mix($color-shadow, $color-brand, 10%);
 $base-opentype-features: 'kern', 'liga'; //TODO: check 'frac' and add if required.
 
 // Spacing
-$base-line-height: 26px; // $root-line-height
+$base-line-height: 24px; // $root-line-height
 $base-vertical-spacing-unit: rem($base-line-height / 2);
 $base-horizontal-spacing-unit: rem(($base-line-height * $modular-scale-ratio) / 2);
 

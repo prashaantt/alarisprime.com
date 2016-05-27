@@ -1,3 +1,9 @@
+:root {
+  @include bp(medium) {
+    font-size: 125%; // 16px → 20px
+  }
+}
+
 html {
   text-rendering: geometricPrecision;
   font-feature-settings: $base-opentype-features;
