@@ -16,7 +16,7 @@
   width: (100%);
 
   @include bp(medium) {
-    width: (100% / 2);
+    width: (100% / 3);
   }
 
   @include bp(large) {
