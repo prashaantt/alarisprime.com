@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com:alarisprime/alarisprime.git"
+    "url": "git@github.com:alarisprime/alarisprime.com.git"
   },
   "contributors": [
     "Saneef Ansari <s@alarisprime.com> (https://saneef.com/)",
