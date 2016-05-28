@@ -15,6 +15,9 @@
 		<!-- endbuild -->
 
 		<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+		<!-- build:js /scripts/bundle.js data-turbolinks-track="reload" defer="defer" -->
+		<script src="/scripts/bundle.js"></script>
+		<!-- endbuild -->
 	</head>
 	<body>
 		{% include "../includes/header.html" %}
@@ -23,9 +26,5 @@
 		{% endblock %}
 
 		{% include "../includes/footer.html" %}
-
-		<!-- build:js /scripts/bundle.js data-turbolinks-track="reload" async -->
-		<script src="/scripts/bundle.js" async></script>
-		<!-- endbuild -->
 	</body>
 </html>
