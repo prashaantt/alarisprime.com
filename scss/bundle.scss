@@ -14,6 +14,7 @@
 @import 'base';
 
 // Components
+@import 'component.form';
 @import 'component.logo';
 @import 'component.main-nav';
 @import 'component.hero-quote';
@@ -23,6 +24,7 @@
 @import 'component.article';
 @import 'component.person';
 @import 'component.organisation';
+@import 'component.overlay';
 
 // Vendor
 @import 'vendor.turbolinks';

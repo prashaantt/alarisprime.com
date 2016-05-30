@@ -1,10 +1,10 @@
-{% from "../macros/contact-mailto-tag.html" import contactMailtoTag %}
+{% from "../macros/contact-trigger-tag.html" import contactTriggerTag %}
 
 <div class="footer">
 	<div class="footer__inner">
 		{% if not hideContactOnFooter %}
 		<div class="footer__content">
-			Like to work with us? {{ contactMailtoTag(text = 'Write to us', email = site.contactEmail) }}.
+			Like to work with us? {{ contactTriggerTag(text = 'Write to us', email = site.contactEmail) }}.
 		</div>
 		{% endif %}
 		<div class="footer__legal">&copy; 2016 Alaris Prime</div>

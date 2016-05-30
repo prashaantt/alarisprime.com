@@ -4,7 +4,7 @@ hideContactOnFooter: true
 
 {% extends "./layouts/base.html" %}
 
-{% from "./macros/contact-mailto-tag.html" import contactMailtoTag %}
+{% from "./macros/contact-trigger-tag.html" import contactTriggerTag %}
 
 {% block metaDescription %}<meta name="description" content="We help businesses every step of the way in building beautiful and performant products.">{% endblock %}
 
@@ -38,7 +38,7 @@ hideContactOnFooter: true
 				and many more.
 			</p>
 			<br>
-			<p>Want us to help? {{ contactMailtoTag(text = 'Write to us', email = site.contactEmail) }}.</p>
+			<p>Want us to help? {{ contactTriggerTag(text = 'Write to us', email = site.contactEmail) }}.</p>
 		</div>
 	</div>
 </div>

@@ -1,0 +1,52 @@
+// .form {}
+
+.button {
+  display: inline-block;
+  padding: ($base-vertical-spacing-unit - rem(3)) $base-horizontal-spacing-unit $base-vertical-spacing-unit;
+  color: $color-brand;
+  text-align: center;
+  background-color: $color-highlight;
+}
+
+.button--primary {
+  color: $color-highlight;
+  background-color: $color-brand;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: $base-vertical-spacing-unit / 2;
+  color: $color-text-light;
+  font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
+}
+
+.input-control,
+.input-textarea {
+  width: 100%;
+  padding: ($base-vertical-spacing-unit / 3) ($base-horizontal-spacing-unit / 3);
+  border: $base-border;
+  outline: none;
+
+  &:focus,
+  &:active {
+    border-color: $base-border-color-dark;
+  }
+}
+
+.input-textarea {
+  height: $base-vertical-spacing-unit * 8;
+  resize: none;
+
+  @include bp(medium) {
+    height: $base-vertical-spacing-unit * 16;
+  }
+}
+
+.form__group {
+  margin-bottom: $base-vertical-spacing-unit;
+}
+
+.form__group--minor {
+  margin-top: -1 * $base-vertical-spacing-unit;
+  font-size: modular-scale(-1);
+}
