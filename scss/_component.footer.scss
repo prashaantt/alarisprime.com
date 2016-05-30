@@ -18,7 +18,7 @@
 
 .footer__content {
   @include bp(medium) {
-    @include span-columns(6);
+    @include span-columns(7);
   }
 }
 
@@ -26,7 +26,7 @@
   font-size: modular-scale(-1);
 
   .footer__content + & {
-    @include span-columns(6);
+    @include span-columns(7);
 
     margin-top: $base-vertical-spacing-unit;
 

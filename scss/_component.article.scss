@@ -47,7 +47,7 @@
   @include span-columns(12);
 
   @include bp(medium) {
-    @include span-columns(6);
+    @include span-columns(7);
   }
 }
 
