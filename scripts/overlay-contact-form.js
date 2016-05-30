@@ -2,7 +2,9 @@ document.addEventListener('turbolinks:load', function () {
 	const emptyArray = [];
 	const overlayEl = document.querySelectorAll('.overlay');
 
-	const toggleOverlay = function () {
+	const toggleOverlay = function (e) {
+		e.preventDefault();
+
 		emptyArray.forEach.call(overlayEl, function (el) {
 			el.classList.toggle('overlay--open');
 		});
