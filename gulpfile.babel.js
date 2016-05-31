@@ -85,6 +85,11 @@ gulp.task('sitemap', function () {
 	gulp.src('dist/**/*.html', {
 		read: false
 	})
+	.pipe($.filter([
+		'**',
+		'!dist/thanks/*.html'
+	]))
+	// .pipe($.print())
 	.pipe($.sitemap({
 		siteUrl: siteConfig.baseUrl,
 		lastmod: false,
