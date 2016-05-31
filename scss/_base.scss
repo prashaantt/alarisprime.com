@@ -84,6 +84,10 @@ blockquote {
   }
 }
 
+strong {
+  font-weight: $base-font-weight-bold;
+}
+
 abbr {
   font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
 }
