@@ -1,11 +1,15 @@
 .button {
   display: inline-block;
   padding: ($base-vertical-spacing-unit - rem(3)) $base-horizontal-spacing-unit $base-vertical-spacing-unit;
-  font-size: modular-scale(-1);
   font-weight: $base-font-weight-bold;
   color: $color-brand;
   text-align: center;
   background-color: $color-highlight;
+  border-radius: $base-border-radius;
+}
+
+.button--small {
+  padding: ($base-vertical-spacing-unit / 3 - rem(3)) ($base-horizontal-spacing-unit / 2) ($base-vertical-spacing-unit / 3);
 }
 
 .button--primary {
