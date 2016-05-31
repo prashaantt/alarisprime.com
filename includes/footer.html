@@ -4,7 +4,7 @@
 	<div class="footer__inner">
 		{% if not hideContactOnFooter %}
 		<div class="footer__content">
-			Like to work with us? {{ contactTriggerTag(text = 'Write to us', email = site.contactEmail) }}.
+			{{ contactTriggerTag(text = 'Like to work with us?', email = site.contactEmail) }}
 		</div>
 		{% endif %}
 		<div class="footer__legal">&copy; 2016 Alaris Prime</div>
