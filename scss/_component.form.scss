@@ -1,18 +1,5 @@
 // .form {}
 
-.button {
-  display: inline-block;
-  padding: ($base-vertical-spacing-unit - rem(3)) $base-horizontal-spacing-unit $base-vertical-spacing-unit;
-  color: $color-brand;
-  text-align: center;
-  background-color: $color-highlight;
-}
-
-.button--primary {
-  color: $color-highlight;
-  background-color: $color-brand;
-}
-
 .input-label {
   display: block;
   margin-bottom: $base-vertical-spacing-unit / 2;
