@@ -1,18 +1,32 @@
 .button {
   display: inline-block;
-  padding: ($base-vertical-spacing-unit - rem(3)) $base-horizontal-spacing-unit $base-vertical-spacing-unit;
+  padding: ($base-vertical-spacing-unit - rem(2)) $base-horizontal-spacing-unit $base-vertical-spacing-unit;
   font-weight: $base-font-weight-bold;
   color: $color-brand;
   text-align: center;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
   background-color: $color-highlight;
   border-radius: $base-border-radius;
-}
 
-.button--small {
-  padding: ($base-vertical-spacing-unit / 3 - rem(3)) ($base-horizontal-spacing-unit / 2) ($base-vertical-spacing-unit / 3);
 }
 
 .button--primary {
   color: $color-highlight;
   background-color: $color-brand;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-highlight;
+  }
+}
+
+.button--small {
+  padding: ($base-vertical-spacing-unit / 3 - rem(2)) ($base-horizontal-spacing-unit / 2) ($base-vertical-spacing-unit / 3);
+}
+
+.button--inline {
+  vertical-align: baseline;
 }
