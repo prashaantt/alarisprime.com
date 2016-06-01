@@ -180,6 +180,30 @@ gulp.task('postbuild:cleanup', () => {
 	del.sync(['./dist/rev-manifest.json']);
 });
 
+gulp.task('size', () => {
+	gulp.src('dist/scripts/*')
+		.pipe($.size({
+			title: 'scripts',
+			gzip: true,
+			showFiles: true,
+			showTotal: false
+		}));
+
+	gulp.src('dist/css/*')
+		.pipe($.size({
+			title: 'scripts',
+			gzip: true,
+			showFiles: true,
+			showTotal: false
+		}));
+
+	return gulp.src('dist/**/*')
+		.pipe($.size({
+			title: 'build',
+			gzip: true
+		}));
+});
+
 gulp.task('serve', ['build-core'], () => {
 	browserSync({
 		server: {
@@ -231,6 +255,7 @@ gulp.task('build', cb => {
 		['useref'],
 		['assets-rev-replace'],
 		['postbuild:cleanup'],
+		['size'],
 		cb
 	);
 });
