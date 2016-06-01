@@ -27,7 +27,7 @@ $base-horizontal-spacing-unit: rem(($base-line-height * $modular-scale-ratio) / 
 
 // Border
 $base-border-color: mix($color-highlight, $color-grey-lighter, 30%);
-$base-border-color-dark: mix($color-highlight, $color-grey-lighter, 15%);
+$base-border-color-dark: mix($color-shadow, $color-grey-lighter, 20%);
 $base-border-width: 1px;
 $base-border-radius: 1px;
 $base-border: $base-border-width solid $base-border-color;
