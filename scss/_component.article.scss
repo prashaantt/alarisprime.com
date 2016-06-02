@@ -1,9 +1,5 @@
 .article {
   @include outer-container;
-
-  p {
-    @extend %indented-paragraphs;
-  }
 }
 
 .article__inner {

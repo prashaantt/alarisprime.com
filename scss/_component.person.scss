@@ -23,10 +23,6 @@
   padding: $base-vertical-spacing-unit $base-horizontal-spacing-unit;
   margin-bottom: $base-vertical-spacing-unit * 2;
 
-  p {
-    @extend %indented-paragraphs;
-  }
-
   .people & {
     @include bp(medium) {
       width: (100% / 2);

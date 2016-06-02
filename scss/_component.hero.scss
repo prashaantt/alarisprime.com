@@ -20,8 +20,4 @@
   @include bp(large) {
     @include span-columns(7);
   }
-
-  p {
-    @extend %indented-paragraphs;
-  }
 }
