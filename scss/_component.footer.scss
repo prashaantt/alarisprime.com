@@ -11,6 +11,9 @@
 
 .footer__content,
 .footer__legal {
+  font-size: modular-scale(-1);
+  line-height: 2 * $base-vertical-spacing-unit;
+
   @include bp(medium) {
     color: $color-text-lighter;
   }
@@ -23,9 +26,6 @@
 }
 
 .footer__legal {
-  font-size: modular-scale(-1);
-  line-height: 2 * $base-vertical-spacing-unit;
-
   .footer__content + & {
     @include span-columns(6);
 

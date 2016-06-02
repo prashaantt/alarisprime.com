@@ -4,7 +4,7 @@
 	<div class="footer__inner">
 		{% if not hideContactOnFooter %}
 		<div class="footer__content">
-			{{ contactTriggerTag(text = 'Like to work with us?', email = site.contactEmail) }}
+			Like to work with us? {{ contactTriggerTag(text = 'Tell us about your project', email = site.contactEmail) }}. To stay up to date, subscribe to our <a class="link link--minor" href="{{ site.newsletterSignupUrl }}" rel="external">newsletter</a>, <a class="link link--minor" href="{{ site.twitterUrl}}" rel="external">Twitter</a> or <a class="link link--minor" href="{{ site.facebookUrl }}" rel="external">Facebook</a> feed.
 		</div>
 		{% endif %}
 		<div class="footer__legal">&copy; 2016 Alaris Prime</div>
