@@ -47,6 +47,10 @@
   @include span-columns(12);
 
   @include bp(medium) {
+    @include span-columns(9);
+  }
+
+  @include bp(medium) {
     @include span-columns(7);
   }
 }
@@ -55,17 +59,11 @@
   min-height: #{(100 * 2 / 3)}vh;
 }
 
-.article--wide {
-  .article__content {
-    @include bp(medium) {
-      @include span-columns(9);
-    }
-  }
-}
-
 .article--full-width {
   .article__content {
-    @include span-columns(12);
+    @include bp(medium) {
+      @include span-columns(12);
+    }
   }
 }
 

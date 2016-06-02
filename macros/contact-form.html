@@ -1,5 +1,5 @@
 {% macro contactForm(pageIdentifier='', email, title='Write to Us', successUrl, fullWidth = false, newsletterSignupUrl, isDiscardable = false) %}
-{% set classNames = 'article--wide' %}
+{% set classNames = '' %}
 {% if fullWidth %}
 {% set classNames = 'article--full-width' %}
 {% endif %}
@@ -28,8 +28,7 @@ I’m interested in ______.
 How do we proceed?
 
 Best
-__Your Name__
-					</textarea>
+__Your Name__</textarea>
 				</div>
 				<div class="form__group form__group--minor">
 					<label>
