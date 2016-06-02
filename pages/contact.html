@@ -1,6 +1,5 @@
 ---
 title: Contact
-hideContactOnFooter: true
 ---
 
 {% extends "./layouts/base.html" %}
@@ -17,19 +16,11 @@ hideContactOnFooter: true
 			<h1 class="article__title">Contact</h1>
 		</div>
 		<div class="article__content">
-			<p>You can write to us on {{ contactTriggerTag(text = 'hello@alarisprime.com', email = site.contactEmail) }}.</p>
+			<p>You can write to us on <a class="link link--minor" href="mailto:{{site.contactEmail}}">{{site.contactEmail}}</a>.</p>
 		</div>
 	</div>
 </article>
 
 {{ contactForm() }}
-
-<article class="article article--wide">
-	<div class="article__inner">
-		<div class="article__content">
-			<p>To stay up to date, subscribe to our <a href="{{ site.newsletterSignupUrl }}" rel="external">newsletter</a>, <a href="{{ site.twitterUrl}}" rel="external">Twitter</a> or <a href="{{ site.facebookUrl }}" rel="external">Facebook</a> feed.</p>
-		</div>
-	</div>
-</article>
 
 {% endblock %}
