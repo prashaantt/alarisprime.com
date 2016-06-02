@@ -1,0 +1,50 @@
+{% macro contactForm(pageIdentifier='', email, title='Write to Us', successUrl, fullWidth = false, newsletterSignupUrl, isDiscardable = false) %}
+{% set classNames = 'article--wide' %}
+{% if fullWidth %}
+{% set classNames = 'article--full-width' %}
+{% endif %}
+<article class="article {{ classNames }}">
+	<div class="article__inner">
+		<div class="article__header">
+			<h1 class="article__title">{{ title }}</h1>
+		</div>
+		<div class="article__content">
+			<form class="form" id="contact-form"
+				action="https://formspree.io/{{ email }}"
+				method="POST">
+				<div class="form__group">
+					<label class="input-label" for="contact-form-name">Name</label>
+					<input class="input-control" type="text" name="name" id="contact-form-name" required>
+				</div>
+				<div class="form__group">
+					<label class="input-label" for="contact-form-email">Email</label>
+					<input class="input-control" type="email" name="email" id="contact-form-email" required>
+				</div>
+				<div class="form__group">
+					<label class="input-label" for="contact-form-message">Message</label>
+					<textarea class="input-textarea" name="message" id="contact-form-message">Hello,
+
+I’m interested in ______.
+How do we proceed?
+
+Best
+__Your Name__
+					</textarea>
+				</div>
+				<div class="form__group form__group--minor">
+					<label>
+						<input class="checkbox" type="checkbox" name="newsletter" checked> I would like to subscribe the <a class="link link--minor" href="newsletterSignupUrl">Alaris Prime Gazette</a>.
+					</label>
+				</div>
+				<input type="text" name="_gotcha" style="display:none" />
+				<input type="hidden" name="page-identifier" style="display:none" value="{{pageIdentifier}}" />
+				<input type="hidden" name="_next" value="{{ successUrl }}" />
+				<input class="button button--primary button--small" type="submit" value="Send the message">
+				{% if isDiscardable %}
+				<a href="javascript:;" class="button button--small js-overlay-close">Discard</a>
+				{% endif %}
+			</form>
+		</div>
+	</div>
+</article>
+{% endmacro %}

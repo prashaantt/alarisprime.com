@@ -6,20 +6,30 @@ hideContactOnFooter: true
 {% extends "./layouts/base.html" %}
 
 {% from "./macros/contact-trigger-tag.html" import contactTriggerTag %}
+{% from "./macros/contact-form.html" import contactForm %}
 
 <title>{% block title %}{{ title }}{% endblock %}</title>
 
 {% block content %}
-<article class="article article--min-height article--wide">
+<article class="article article--wide">
 	<div class="article__inner">
 		<div class="article__header">
 			<h1 class="article__title">Contact</h1>
 		</div>
 		<div class="article__content">
 			<p>You can write to us on {{ contactTriggerTag(text = 'hello@alarisprime.com', email = site.contactEmail) }}.</p>
-			<br>
+		</div>
+	</div>
+</article>
+
+{{ contactForm() }}
+
+<article class="article article--wide">
+	<div class="article__inner">
+		<div class="article__content">
 			<p>To stay up to date, subscribe to our <a href="{{ site.newsletterSignupUrl }}" rel="external">newsletter</a>, <a href="{{ site.twitterUrl}}" rel="external">Twitter</a> or <a href="{{ site.facebookUrl }}" rel="external">Facebook</a> feed.</p>
 		</div>
 	</div>
 </article>
+
 {% endblock %}
