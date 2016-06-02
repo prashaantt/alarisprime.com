@@ -57,13 +57,13 @@ a,
 
 %indented-paragraphs {
   & + & {
-    margin-top: -1 * $base-vertical-spacing-unit;
+    margin-top: -1 * $base-vertical-spacing-unit * 2;
     text-indent: $base-horizontal-spacing-unit * 1.5;
   }
 }
 
 p {
-  margin-bottom: $base-vertical-spacing-unit;
+  margin-bottom: $base-vertical-spacing-unit * 2;
   font-feature-settings: $base-opentype-features, 'onum';
 }
 
