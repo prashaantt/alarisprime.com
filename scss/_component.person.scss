@@ -28,6 +28,10 @@
       width: (100% / 2);
     }
   }
+
+  p {
+    @extend %indented-paragraphs;
+  }
 }
 
 .person__image-holder,
