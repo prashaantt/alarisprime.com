@@ -58,7 +58,7 @@ a,
 %indented-paragraphs {
   & + & {
     margin-top: -1 * $base-vertical-spacing-unit * 2;
-    text-indent: $base-horizontal-spacing-unit * 2;
+    text-indent: $base-horizontal-spacing-unit * 1.5;
   }
 }
 
