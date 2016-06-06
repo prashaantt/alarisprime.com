@@ -5,10 +5,32 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="theme-color" content="{{ site['brandColor'] }}">
-		{% block metaDescription %}{% endblock %}
 
-		<title>{% block title %}{{ site.title }}{% endblock %}</title>
+		{% block title %}
+		<title>{% if not title %}{{ site.title }}{% else %}{{ title }}{% endif %}</title>
+		{% endblock %}
+
+		{% if description %}
+		<meta name="description" content="{{ description }}">
+		{% endif %}
+
+		{% if not disableOgMetaTags %}
+		<meta property="og:title" content="{% if not title %}{{ site.title }}{% else %}{{ title }}{% endif %}" />
+		<meta property="og:image" content="{{ site.baseUrl }}{% if coverPhoto %}{{ coverPhoto }}{% else %}{{ site.defaultCoverPhoto }}{% endif %}" />
+		<meta property="og:site_name" content="{{ site.title }}" />
+			{% if description %}
+			<meta property="og:description" content="{{ description }}" />
+			{% endif %}
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="{% if not title %}{{ site.title }}{% else %}{{ title }}{% endif %}" />
+		<meta name="twitter:image" content="{{ site.baseUrl }}{% if coverPhoto %}{{ coverPhoto }}{% else %}{{ site.defaultCoverPhoto }}{% endif %}" />
+			{% if description %}
+			<meta name="twitter:description" content="{{ description }}" />
+			{% endif %}
+		{% endif %}
+
+		<meta name="theme-color" content="{{ site['brandColor'] }}">
 		<link rel="logo" type="image/svg" href="/images/logo.svg">
 
 		<!-- build:css /css/bundle.css data-turbolinks-track="reload" -->
