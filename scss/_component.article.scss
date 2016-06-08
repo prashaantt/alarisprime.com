@@ -50,7 +50,7 @@
     @include span-columns(9);
   }
 
-  @include bp(medium) {
+  @include bp(large) {
     @include span-columns(7);
   }
 }
