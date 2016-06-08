@@ -82,7 +82,7 @@ gulp.task('copy:images', () => {
 gulp.task('copy', ['copy:root', 'copy:images']);
 
 gulp.task('sitemap', function () {
-	gulp.src('dist/**/*.html', {
+	return gulp.src('dist/**/*.html', {
 		read: false
 	})
 	.pipe($.filter([
