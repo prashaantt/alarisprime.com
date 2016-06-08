@@ -21,13 +21,23 @@
 
 .footer__content {
   @include bp(medium) {
-    @include span-columns(6);
+    @include span-columns(9);
+  }
+
+  @include bp(large) {
+    @include span-columns(7);
   }
 }
 
 .footer__legal {
   .footer__content + & {
-    @include span-columns(6);
+    @include bp(medium) {
+      @include span-columns(3);
+    }
+
+    @include bp(large) {
+      @include span-columns(5);
+    }
 
     margin-top: $base-vertical-spacing-unit;
 
