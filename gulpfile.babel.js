@@ -44,7 +44,9 @@ gulp.task('metalsmith', () => {
 						}
 					}
 				}),
-				require('metalsmith-hyphenate')()
+				require('metalsmith-hyphenate')({
+					elements: ['p', 'figcaption', 'li', 'ol']
+				})
 			]
 		}))
 		.pipe(gulp.dest('dist'));
