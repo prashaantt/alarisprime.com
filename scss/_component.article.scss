@@ -12,7 +12,7 @@
   margin-left: ($base-horizontal-spacing-unit * 2);
 
   font-size: modular-scale(1);
-  font-weight: normal;
+  font-weight: $base-font-weight;
   color: $color-text-light;
 
   background-color: $color-white;
