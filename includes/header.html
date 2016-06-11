@@ -2,8 +2,8 @@
 	<div class="header__inner">
 		<a href="/"><span class="logo">{% include "../images/logo.svg" %}</span></a>
 		<nav class="main-nav">
+			<a class="{{ 'active' if path == 'work' }}" href="/work/">Work</a>
 			<a class="{{ 'active' if path == 'team' }}" href="/team/">Team</a>
-			{# <a class="{{ 'active' if path == 'projects' }}" href="/projects/">Projects</a> #}
 			<a class="{{ 'active' if path == 'contact' }}" href="/contact/">Contact</a>
 			<a href="{{ site.blogUrl }}">Blog</a>
 		</nav>
