@@ -5,11 +5,19 @@
   color: $color-brand;
   text-align: center;
   text-align: center;
+  text-shadow: none;
   white-space: nowrap;
   vertical-align: middle;
   background-color: $color-highlight;
   border-radius: $base-border-radius;
+  box-shadow: none;
 
+  &:hover,
+  &:focus,
+  &:active {
+    text-shadow: none;
+    box-shadow: none;
+  }
 }
 
 .button--primary {
