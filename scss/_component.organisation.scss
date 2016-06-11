@@ -22,6 +22,10 @@
   @include bp(large) {
     width: (100% / 4);
   }
+
+  a {
+    @extend %link-major;
+  }
 }
 
 .organisation__logo-link {

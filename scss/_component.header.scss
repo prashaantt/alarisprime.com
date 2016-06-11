@@ -1,5 +1,9 @@
 .header {
   @include outer-container;
+
+  a {
+    @extend %link-major;
+  }
 }
 
 .header__inner {

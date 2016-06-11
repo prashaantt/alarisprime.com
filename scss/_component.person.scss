@@ -67,6 +67,7 @@
   font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
 
   a {
+    @extend %link-major;
     font-size: strip-units(modular-scale(-1)) * 1rem;
 
     &::after {
@@ -81,8 +82,4 @@
   }
 }
 
-.person__note {
-  a {
-    @extend %link-minor;
-  }
-}
+// .person__note {}

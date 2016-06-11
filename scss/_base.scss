@@ -19,17 +19,6 @@ svg {
   max-width: 100%;
 }
 
-a,
-.link {
-  color: $color-link;
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: $color-link-hover;
-  }
-}
-
 // [rel='external'] {
 //   &:after {
 //     font-size: modular-scale(-2);
@@ -51,8 +40,30 @@ a,
   }
 }
 
+%link-major {
+  color: $color-link;
+  box-shadow: none;
+  transition: color $base-transition-delay $base-transition-easing;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-link-hover;
+    box-shadow: none;
+  }
+}
+
+a,
+.link {
+  @extend %link-minor;
+}
+
 .link--minor {
   @extend %link-minor;
+}
+
+.link--major {
+  @extend %link-major;
 }
 
 %indented-paragraphs {
