@@ -11,8 +11,10 @@
 
 	|-- root - Keep all static files — robots.txt, favicon.ico,… – which needs to be copied to the root of the website
 	|-- images 
-	|-- pages - pages to be rendered
+	|-- contents - pages to be rendered
+			+-- projects - the files from this folder will not be rendered. It is used as collections to populate `projects` page.
 	|-- layout - Nunjucks templates, which can be used for pages
+	|-- macros - Nunjucks macros files
 	|-- includes - Nunjucks include files
 	|-- scss 
 	+-- scripts
