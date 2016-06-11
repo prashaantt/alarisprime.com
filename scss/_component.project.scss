@@ -1,5 +1,14 @@
 // .project {}
 
+.project__title,
+.project__sub-title {
+  display: inline;
+
+  @include bp(medium) {
+    display: block;
+  }
+}
+
 // .project__title {}
 .project__sub-title {
   font-size: modular-scale(-1);
@@ -9,6 +18,7 @@
 }
 
 .project__header {
+  margin-bottom: $base-vertical-spacing-unit;
   @include bp(medium) {
     @include span-columns(3);
   }
@@ -21,5 +31,9 @@
 
   @include bp(large) {
     @include span-columns(7);
+  }
+
+  p {
+    @extend %indented-paragraphs;
   }
 }
