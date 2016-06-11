@@ -1,0 +1,24 @@
+---
+title: Projects
+---
+
+{% extends "./layouts/base.html" %}
+
+{% from "./macros/project-snippet.html" import projectSnippet %}
+
+{% block content %}
+<article class="article article--full-width">
+	<div class="article__inner">
+		<div class="article__header">
+			<h2 class="article__title">{{title}}</h2>
+		</div>
+		<div class="article__content">
+			<div class="recent-projects">
+				{% for project in collections.projects %}
+					{{projectSnippet(project, console)}}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</article>
+{% endblock %}

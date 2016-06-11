@@ -1,0 +1,35 @@
+{% macro projectSnippet(metaData, console) %}
+<div class="project">
+	<div class="project__header">
+		<h2 class="project__title">
+			{% if metaData.projectUrl %}
+			<a href="{{metaData.projectUrl}}">{{metaData.title}}</a>
+			{% else %}
+			{{metaData.title}}
+			{% endif %}
+		</h2>
+		{% if metaData.company %}
+		<h3 class="project__sub-title">
+			By{{''}}
+			{% if metaData.companyUrl %}
+			<a href="{{metaData.companyUrl}}">{{metaData.company}}</a>
+			{% else %}
+			{{metaData.company}}
+			{% endif %}
+		</h3>
+		{% elif metaData.agency %}
+		<h3 class="project__sub-title">
+			With{{''}}
+			{% if metaData.agencyUrl %}
+			<a href="{{metaData.agencyUrl}}">{{metaData.agency}}</a>
+			{% else %}
+			{{metaData.agency}}
+			{% endif %}
+		</h3>
+		{% endif %}
+	</div>
+	<div class="project__contents">
+		{{metaData.contents}}
+	</div>
+</div>
+{% endmacro %}

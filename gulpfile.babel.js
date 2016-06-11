@@ -14,13 +14,26 @@ const siteConfig = require('./site.config.json');
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('metalsmith', () => {
-	return gulp.src('pages/**/*.html')
+	return gulp.src([
+		'contents/**/*.html',
+		'projects/**/*.html'
+	])
 		.pipe($.metalsmith({
 			use: [
 				require('metalsmith-define')({
 					site: siteConfig,
 					console: console
 				}),
+				require('metalsmith-collections')({
+					projects: {
+						pattern: 'projects/**/*',
+						sortBy: 'date',
+						reverse: true
+					}
+				}),
+				require('metalsmith-ignore')([
+					'projects/*'
+				]),
 				require('metalsmith-permalinks')(),
 				require('metalsmith-in-place')({
 					engine: 'nunjucks',
@@ -224,7 +237,7 @@ gulp.task('serve', ['build-core'], () => {
 	});
 
 	gulp.watch([
-		'pages/**/*.html',
+		'contents/**/*.html',
 		'includes/**/*.html',
 		'macros/**/*.html',
 		'layouts/**/*.html'

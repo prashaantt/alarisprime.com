@@ -42,6 +42,7 @@ svg {
 
 %link-major {
   color: $color-link;
+  text-shadow: none;
   box-shadow: none;
   transition: color $base-transition-delay $base-transition-easing;
 
@@ -49,6 +50,7 @@ svg {
   &:active,
   &:focus {
     color: $color-link-hover;
+    text-shadow: none;
     box-shadow: none;
   }
 }
@@ -76,6 +78,20 @@ a,
 p {
   margin-bottom: $base-vertical-spacing-unit * 2;
   font-feature-settings: $base-opentype-features, 'onum';
+}
+
+blockquote,
+dd,
+figure,
+ol,
+ul {
+  margin-bottom: $base-vertical-spacing-unit * 2;
+}
+
+figcaption {
+  font-size: modular-scale(-1);
+  line-height: $base-vertical-spacing-unit * 2;
+  color: $color-text-light;
 }
 
 blockquote {
