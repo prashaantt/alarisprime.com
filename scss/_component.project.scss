@@ -1,4 +1,12 @@
-// .project {}
+.project {
+  @include clearfix;
+
+  margin-bottom: $base-vertical-spacing-unit * 2;
+
+  @include bp(medium) {
+    margin-bottom: $base-vertical-spacing-unit * 4;
+  }
+}
 
 .project__title,
 .project__sub-title {
@@ -36,5 +44,9 @@
 
   p {
     @extend %indented-paragraphs;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }

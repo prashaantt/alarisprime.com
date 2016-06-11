@@ -117,6 +117,12 @@ strong {
 
 abbr {
   font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
+
+  &[title] {
+    text-decoration: none;
+    cursor: help;
+    border-bottom: $base-border-width dotted $base-border-color-dark;
+  }
 }
 
 .caps-to-small-caps {
