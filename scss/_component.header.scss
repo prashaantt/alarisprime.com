@@ -8,6 +8,10 @@
 
 .header__inner {
   @include span-columns(12);
+  padding: ($base-vertical-spacing-unit * 2) $base-horizontal-spacing-unit;
 
-  padding: ($base-vertical-spacing-unit * 2) ($base-horizontal-spacing-unit * 2);
+  @include bp(medium) {
+    padding-right: $base-horizontal-spacing-unit;
+    padding-left: $base-horizontal-spacing-unit;
+  }
 }

@@ -5,8 +5,13 @@
 .footer__inner {
   @include clearfix;
 
-  padding: ($base-vertical-spacing-unit * 2) ($base-horizontal-spacing-unit * 2);
+  padding: ($base-vertical-spacing-unit * 2) $base-horizontal-spacing-unit;
   border-top: $base-border;
+
+  @include bp(medium) {
+    padding-right: ($base-horizontal-spacing-unit * 2);
+    padding-left: ($base-horizontal-spacing-unit * 2);
+  }
 }
 
 .footer__content,
