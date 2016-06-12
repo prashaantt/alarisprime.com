@@ -19,11 +19,13 @@
 
 // .project__title {}
 .project__sub-title {
-  font-size: modular-scale(-1);
   font-weight: $base-font-weight;
   color: $color-text-light;
-
   font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
+
+  @include bp(medium) {
+    font-size: modular-scale(-1);
+  }
 }
 
 .project__header {
