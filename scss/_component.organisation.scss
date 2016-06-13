@@ -14,6 +14,7 @@
 
 .organisation {
   width: (100%);
+  margin-bottom: $base-vertical-spacing-unit;
 
   @include bp(medium) {
     width: (100% / 3);
@@ -29,7 +30,7 @@
 }
 
 .organisation__logo-link {
-  display: inline-block;
+  display: block;
   width: $base-vertical-spacing-unit * 10.55555556; // 16:9 of line height
   line-height: $base-vertical-spacing-unit * 5;
   text-align: center;
@@ -44,5 +45,7 @@
 
 .organisation__logo {
   display: block;
+  height: $base-vertical-spacing-unit * 3;
+  max-width: none;
   vertical-align: middle;
 }
