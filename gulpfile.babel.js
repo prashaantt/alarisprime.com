@@ -6,6 +6,7 @@ import runSequence from 'run-sequence';
 import webpack from 'webpack';
 import browserSync from 'browser-sync';
 import through2 from 'through2';
+import merge from 'merge-stream';
 
 const $ = gulpLoadPlugins();
 
@@ -192,11 +193,11 @@ gulp.task('build-core', cb => {
 });
 
 gulp.task('postbuild:cleanup', () => {
-	del.sync(['./dist/rev-manifest.json']);
+	return del.sync(['./dist/rev-manifest.json']);
 });
 
 gulp.task('size', () => {
-	gulp.src('dist/scripts/*')
+	const scriptSize = gulp.src('dist/scripts/*')
 		.pipe($.size({
 			title: 'scripts',
 			gzip: true,
@@ -204,7 +205,7 @@ gulp.task('size', () => {
 			showTotal: false
 		}));
 
-	gulp.src('dist/css/*')
+	const stylesheetSize = gulp.src('dist/css/*')
 		.pipe($.size({
 			title: 'scripts',
 			gzip: true,
@@ -212,11 +213,13 @@ gulp.task('size', () => {
 			showTotal: false
 		}));
 
-	return gulp.src('dist/**/*')
+	const totalBuildSize = gulp.src('dist/**/*')
 		.pipe($.size({
 			title: 'build',
 			gzip: true
 		}));
+
+	return merge(scriptSize, stylesheetSize, totalBuildSize);
 });
 
 gulp.task('serve', ['build-core'], () => {

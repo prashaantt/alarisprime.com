@@ -65,7 +65,8 @@
     "webpack": "^1.13.1"
   },
   "devDependencies": {
-    "gulp-insert": "^0.5.0"
+    "gulp-insert": "^0.5.0",
+    "merge-stream": "^1.0.0"
   },
   "xo": {
     "envs": [
