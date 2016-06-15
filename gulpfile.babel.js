@@ -55,7 +55,7 @@ gulp.task('metalsmith', () => {
 
 const webpackConfig = require('./webpack.config');
 
-gulp.task('scripts', (cb) => {
+gulp.task('scripts', cb => {
 	webpack(webpackConfig, function (err, stats) {
 		if (err) {
 			throw new $.util.PluginError('webpack', err);
