@@ -6,8 +6,14 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-			{test: /\.js$/, loaders: ['babel-loader']},
-			{test: require.resolve('turbolinks'), loader: 'imports?this=>window'}
+			{
+				test: /\.js$/,
+				loaders: ['babel-loader']
+			},
+			{
+				test: require.resolve('turbolinks'),
+				loader: 'imports?this=>window'
+			}
 		]
 	}
 };
