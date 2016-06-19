@@ -3,8 +3,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
 
   @include bp(large) {
     @include span-columns(9);
@@ -13,15 +11,12 @@
 }
 
 .organisation {
-  width: (100%);
+  width: 100%;
+  margin-right: $base-vertical-spacing-unit * 2;
   margin-bottom: $base-vertical-spacing-unit;
 
   @include bp(medium) {
-    width: (100% / 3);
-  }
-
-  @include bp(large) {
-    width: (100% / 4);
+    width: auto;
   }
 
   a {
@@ -31,7 +26,8 @@
 
 .organisation__logo-link {
   display: block;
-  width: $base-vertical-spacing-unit * 10.55555556; // 16:9 of line height
+  // width: $base-vertical-spacing-unit * 10.55555556; // 16:9 of line height
+  width: auto;
   line-height: $base-vertical-spacing-unit * 5;
   text-align: center;
   opacity: .3;
