@@ -45,12 +45,12 @@
     &::before {
       position: absolute;
       top: 0;
-      left: 2 * .126625734em; // 4.5px / 35.5378px
+      left: .429273985em; // 10.3/23.994
 
       content: open-quote;
 
       @include bp(medium) {
-        left: .126625734em; // 4.5px / 35.5378px
+        left: .185717743em; // 6.6/35.5378
       }
     }
   }
