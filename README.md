@@ -19,6 +19,16 @@
 	|-- scss 
 	+-- scripts
 
+### Adding a new page
+
+[qGen](https://github.com/alarisprime/qgen) generator for new page is in place. To create a new page with slug `hello-page` and title `Hello World`, run:
+
+```bash
+npm run qgen -- page ./contents --title "Hello World" --slug hello-world
+```
+
+The base file will be generated at `./contents/hello-world.html`.
+
 ### Develoment server
 
 Run `gulp serve` to run the development build, watch for changes and serve locally.
