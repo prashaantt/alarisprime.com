@@ -68,7 +68,7 @@
   "devDependencies": {
     "gulp-insert": "^0.5.0",
     "merge-stream": "^1.0.0",
-    "qgen": "^0.3.3"
+    "qgen": "^1.0.0"
   },
   "xo": {
     "envs": [
