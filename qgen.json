@@ -1,3 +1,7 @@
 {
-  "dest": "./contents"
+  "templates": {
+    "page": {
+      "dest": "./contents"
+    }
+  }
 }
