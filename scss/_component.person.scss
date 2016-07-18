@@ -23,7 +23,11 @@
 
 .person__image-holder {
   display: inline-block;
-  width: (100% / 3);
+  width: $base-vertical-spacing-unit * 10; // using vertical spacing to get multiples of line height
+
+  @include bp(medium) {
+    width: $base-vertical-spacing-unit * 6; // using vertical spacing to get multiples of line height
+  }
 }
 
 .person__image-frame {
