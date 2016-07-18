@@ -14,18 +14,16 @@
 .overlay__container {
   @include outer-container;
   display: flex;
-
-  height: 100%;
-
+  align-content: flex-start;
+  align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
 
+  height: 100%;
   @include bp(medium) {
-    align-items: center;
     align-content: center;
+    align-items: center;
   }
 }
 
