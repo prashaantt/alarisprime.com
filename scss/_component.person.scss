@@ -1,33 +1,11 @@
 .people {
   @include clearfix;
-
-  display: flex;
-  margin-right: -1 * $base-horizontal-spacing-unit;
-  margin-left: -1 * $base-horizontal-spacing-unit;
-
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-
-  @include bp(large) {
-    @include span-columns(9);
-    display: flex;
-  }
 }
 
 .person {
   @include clearfix;
 
-  padding: $base-vertical-spacing-unit $base-horizontal-spacing-unit;
-  margin-bottom: $base-vertical-spacing-unit * 2;
-
-  .people & {
-    @include bp(medium) {
-      width: (100% / 2);
-    }
-  }
+  margin-bottom: $base-vertical-spacing-unit * 4;
 
   p {
     @extend %indented-paragraphs;
@@ -36,16 +14,30 @@
 
 .person__image-holder,
 .person__header {
-  margin-bottom: $base-vertical-spacing-unit;
+  text-align: center;
+
+  @include bp(medium) {
+    text-align: left;
+  }
 }
 
 .person__image-holder {
-  position: relative;
   display: inline-block;
+  width: (100% / 3);
+}
+
+.person__image-frame {
+  position: relative;
+  padding-top: 100%;
 }
 
 .person__image {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
+  width: 100%;
+  height: auto;
   border-radius: 2000px;
   filter: brightness(150%) grayscale(100%);
 }
@@ -56,10 +48,6 @@
 
 .person__image--more-bright {
   filter: brightness(165%) grayscale(100%);
-}
-
-.person__header {
-  text-align: center;
 }
 
 .person__networks {
@@ -82,4 +70,21 @@
   }
 }
 
-// .person__note {}
+.person__header {
+  margin-bottom: $base-vertical-spacing-unit;
+  @include bp(medium) {
+    @include span-columns(3);
+  }
+}
+
+.person__note {
+  @include span-columns(12);
+
+  @include bp(medium) {
+    @include span-columns(9);
+  }
+
+  @include bp(large) {
+    @include span-columns(7);
+  }
+}
