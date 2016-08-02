@@ -21,8 +21,12 @@
 					<input class="input-control" type="email" name="email" id="contact-form-email" required>
 				</div>
 				<div class="form__group">
+					<label class="input-label" for="contact-form-email">Subject</label>
+					<input class="input-control" type="text" name="_subject" id="contact-form-subject" required>
+				</div>
+				<div class="form__group">
 					<label class="input-label" for="contact-form-message">Message</label>
-					<textarea class="input-textarea" name="message" id="contact-form-message">Hello,
+					<textarea class="input-textarea" name="message" id="contact-form-message" required>Hello,
 
 I’m interested in ______.
 How do we proceed?
@@ -37,7 +41,6 @@ __Your Name__</textarea>
 				</div>
 				<input type="text" name="_gotcha" style="display:none" />
 				<input type="hidden" name="page-identifier" style="display:none" value="{{pageIdentifier}}" />
-				<input type="hidden" name="_subject" style="display:none" value="Hello from Alaris Prime" />
 				<input type="hidden" name="_next" value="{{ successUrl }}" />
 				<input class="button button--primary button--small" type="submit" value="Send the message">
 				{% if isDiscardable %}

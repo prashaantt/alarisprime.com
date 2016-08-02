@@ -21,11 +21,11 @@
 }
 
 .input-textarea {
-  height: $base-vertical-spacing-unit * 8;
+  height: $base-vertical-spacing-unit * 6;
   resize: none;
 
   @include bp(medium) {
-    height: $base-vertical-spacing-unit * 16;
+    height: $base-vertical-spacing-unit * 12;
   }
 }
 
