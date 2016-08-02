@@ -2,8 +2,6 @@
 name: Ankur Sethi
 email: ankursethi.in@gmail.com
 socialNetworks:
-  - title: LinkedIn
-    url: http://www.linkedin.com/in/brajeshwa
   - title: Website
     url: http://ankursethi.in/
   - title: Twitter
