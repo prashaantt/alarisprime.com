@@ -3,6 +3,7 @@ title: The Team
 description: The team members of Alaris Prime.
 ---
 
+{% from "./macros/person-snippet.html" import personSnippet %}
 {% from "./macros/img-srcset.html" import profileImgSrcset %}
 
 {% extends "./layouts/base.html" %}
@@ -14,87 +15,9 @@ description: The team members of Alaris Prime.
 			<h1 class="article__title">The Team</h1>
 		</div>
 		<div class="people">
-			<div class="person vcard">
-				<div class="person__header">
-					<div class="person__image-holder">
-						<div class="person__image-frame">{{ profileImgSrcset(class='person__image person__image--more-bright photo', emailHash="80796ca89f7f6882a6066a84e7819693") }}</div>
-					</div>
-					<h2 class="person__name fn">Adit Gupta</h2>
-					<nav class="person__networks">
-						<a href="https://www.linkedin.com/in/aditgupta04" title="LinkedIn">LinkedIn</span></a> <a href="https://twitter.com/aditgupta">Twitter</span></a> <a href="http://www.aditgupta.info/" title="Website">Website</span></a>
-					</nav>
-				</div>
-				<div class="person__note note">
-					<p>Adit Gupta is a user experience designer and an entrepreneur who is passionate about programming and science. He's the creator of <a href="http://uxassist.com/">UX Assist</a> and founder of <a href="http://functionspace.com/">Function Space</a>. He has also worked as an Interaction designer, Technology evangelist, and Python lead.</p>
-					<p>You can read his design articles at <a href="https://medium.com/@aditgupta">Medium</a> and <a href="https://www.smashingmagazine.com/author/adit-gupta/">Smashing Magazine</a>.</p>
-				</div>
-			</div>
-
-			<div class="person vcard">
-				<div class="person__header">
-					<div class="person__image-holder">
-						<div class="person__image-frame">{{ profileImgSrcset(class='person__image photo', emailHash="58ee5dea31e2728e65099cc03c694d8e") }}</div>
-					</div>
-					<h2 class="person__name fn">Ankur Sethi</h2>
-					<nav class="person__networks">
-						<a href="http://twitter.com/GnrlMxms">Twitter</span></a> <a href="http://ankursethi.in/" title="Website">Website</span></a>
-					</nav>
-				</div>
-				<div class="person__note note">
-					<p>Ankur takes selfies, listens to way too much hip-hop, and writes JavaScript.</p>
-					<p>He has worked on everything from filesystems to mobile games, but his first love has always been the web platform.</p>
-					<p>In the past, Ankur has built complex JavaScript applications for <a href="http://insider.in">Insider.in</a>, <a href="http://testmyfont.com/">Understanding Limited</a>, and <a href="http://abof.com">Aditya Birla Online Fashion</a>, among others.</p>
-				</div>
-			</div>
-
-			<div class="person vcard">
-				<div class="person__header">
-					<div class="person__image-holder">
-						<div class="person__image-frame">{{ profileImgSrcset(class='person__image photo', emailHash="cfbad61c3b9bf96572aaa27e061bb80b") }}</div>
-					</div>
-					<h2 class="person__name fn">Brajeshwar Oinam</h2>
-					<nav class="person__networks">
-						<a href="http://www.linkedin.com/in/brajeshwar" title="LinkedIn">LinkedIn</span></a> <a href="http://twitter.com/brajeshwar">Twitter</span></a> <a href="http://brajeshwar.me" title="Website">Website</span></a>
-					</nav>
-				</div>
-				<div class="person__note note">
-					<p>Brajeshwar is a seasoned product designer who has been a part of the founding teams of four startups – <a href="http://www.crunchbase.com/company/mixercast">Mixercast</a>, <a href="http://www.ocricket.com/">oCricket</a>, InfinitelyBeta, and Levoma.</p>
-					<p>In addition, he has worked as a consultant for teams at Disney, Adobe, <abbr>STARZ</abbr>, Obeo, <abbr>ILFS</abbr>, Salorix, Pearson Publishing, OnMobile, Edition Interactive, Tata Interactive Systems, IL&FS.</p>
-				</div>
-			</div>
-
-			<div class="person vcard">
-				<div class="person__header">
-					<div class="person__image-holder">
-						<div class="person__image-frame">{{ profileImgSrcset(class='person__image person__image--less-bright photo', emailHash="d57ab78d2a6ce852e0405b7dc4b50b25") }}</div>
-					</div>
-					<h2 class="person__name fn">Karthik Setloor</h2>
-					<nav class="person__networks">
-						<a href="https://www.linkedin.com/in/karthik-setloor-9ba70b6" title="LinkedIn">LinkedIn</span></a>
-					</nav>
-				</div>
-				<div class="person__note note">
-					<p>Karthik started off his career in advertising. He is a versatile digital designer & creative director. He’s been designing for variety of platforms for over a decade now. Having worked with clients like Nike, Apple, Quixey to name a few.</p>
-					<p>Guiding clients through the process of great and effective design to support their success and growth with experience in problem solving, innovation, disruption.</p>
-					<p>While not working, he likes to put in miles on the saddle of his bikes.</p>
-				</div>
-			</div>
-
-			<div class="person vcard">
-				<div class="person__header">
-					<div class="person__image-holder">
-						<div class="person__image-frame">{{ profileImgSrcset(class='person__image person__image--less-bright photo', emailHash="9c82428ae5e3a7b05fda89449fbb41d2") }}</div>
-					</div>
-					<h2 class="person__name fn">Saneef Ansari</h2>
-					<nav class="person__networks">
-						<a href="http://www.linkedin.com/in/saneef" title="LinkedIn">LinkedIn</span></a> <a href="http://twitter.com/saneef">Twitter</span></a> <a href="http://saneef.com" title="Website">Website</span></a>
-					</nav>
-				</div>
-				<div class="person__note note">
-					<p>Saneef is an information and product designer. Before working with Alaris Prime, he ran an agency in Bangalore that helped a number of local startups to design their products and services.</p>
-					<p>Saneef is a graduate of the National Institute of Design, Bangalore. He has previously worked with renowned design agency <a href="http://ia.net">iA, Zürich</a>.</p>
-				</div>
-			</div>
+			{% for person in collections.people %}
+				{{ personSnippet(person, md5, objectKeys, console) }}
+			{% endfor %}
 		</div>
 	</div>
 </article>

@@ -7,8 +7,15 @@ import webpack from 'webpack';
 import browserSync from 'browser-sync';
 import through2 from 'through2';
 import merge from 'merge-stream';
+import metalsmithMarkdown from 'metalsmith-markdownit';
+import md5 from 'md5';
 
 const $ = gulpLoadPlugins();
+const md = metalsmithMarkdown({
+	breaks: true,
+	typographer: true,
+	html: true
+});
 
 const siteConfig = require('./site.config.json');
 
@@ -16,24 +23,31 @@ gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('metalsmith', () => {
 	return gulp.src([
-		'contents/**/*.html',
-		'projects/**/*.html'
+		'contents/**/*.{html,md}'
 	])
 		.pipe($.metalsmith({
 			use: [
 				require('metalsmith-define')({
 					site: siteConfig,
-					console: console
+					console: console,
+					md5: md5,
+					objectKeys: Object.keys
 				}),
 				require('metalsmith-collections')({
 					projects: {
 						pattern: 'projects/**/*',
 						sortBy: 'date',
 						reverse: true
+					},
+					people: {
+						pattern: 'people/**/*',
+						sortBy: 'name'
 					}
 				}),
+				md,
 				require('metalsmith-ignore')([
-					'projects/*'
+					'projects/*',
+					'people/*'
 				]),
 				require('metalsmith-permalinks')(),
 				require('metalsmith-in-place')({
@@ -242,6 +256,7 @@ gulp.task('serve', ['build-core'], () => {
 	});
 
 	gulp.watch([
+		'contents/**/*.md',
 		'contents/**/*.html',
 		'includes/**/*.html',
 		'macros/**/*.html',
