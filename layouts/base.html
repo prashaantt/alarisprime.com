@@ -15,11 +15,11 @@
 		{% endif %}
 
 		{% if not disableOgMetaTags %}
-		<meta property="og:title" content="{% if not title %}{{ site.title }}{% else %}{{ title }}{% endif %}" />
-		<meta property="og:image" content="{{ site.baseUrl }}{% if coverPhoto %}{{ coverPhoto }}{% else %}{{ site.defaultCoverPhoto }}{% endif %}" />
-		<meta property="og:site_name" content="{{ site.title }}" />
+		<meta prefix="og: http://ogp.me/ns#" property="og:title" content="{% if not title %}{{ site.title }}{% else %}{{ title }}{% endif %}" />
+		<meta prefix="og: http://ogp.me/ns#" property="og:image" content="{{ site.baseUrl }}{% if coverPhoto %}{{ coverPhoto }}{% else %}{{ site.defaultCoverPhoto }}{% endif %}" />
+		<meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="{{ site.title }}" />
 			{% if description %}
-			<meta property="og:description" content="{{ description }}" />
+			<meta prefix="og: http://ogp.me/ns#" property="og:description" content="{{ description }}" />
 			{% endif %}
 
 		<meta name="twitter:card" content="summary" />
