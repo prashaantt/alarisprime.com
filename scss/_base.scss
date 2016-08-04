@@ -76,8 +76,15 @@ a,
 }
 
 p {
+  @extend %indented-paragraphs;
+
   margin-bottom: $base-vertical-spacing-unit * 2;
   font-feature-settings: $base-opentype-features, 'onum';
+}
+
+p + br {
+  display: block;
+  content: ' ';
 }
 
 blockquote,
