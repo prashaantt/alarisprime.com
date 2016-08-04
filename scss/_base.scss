@@ -96,8 +96,9 @@ ul {
 }
 
 figcaption {
+  padding-top: $base-vertical-spacing-unit * .25;
   font-size: modular-scale(-1);
-  line-height: $base-vertical-spacing-unit * 2;
+  line-height: $base-vertical-spacing-unit * 1.25;
   color: $color-text-light;
 }
 
