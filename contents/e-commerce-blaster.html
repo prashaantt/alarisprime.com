@@ -6,6 +6,8 @@ disableOgMetaTags: false
 
 {% extends "./layouts/base.html" %}
 
+{% from "./macros/contact-form.html" import contactForm %}
+
 {% block content %}
 <article class="article article--min-height">
 	<div class="article__inner">
@@ -50,4 +52,5 @@ disableOgMetaTags: false
 		</div>
 	</div>
 </article>
+{{ contactForm(pageIdentifier=title, title='Let’s Discuss', newsletterSignupUrl=site.newsletterSignupUrl) }}
 {% endblock %}
