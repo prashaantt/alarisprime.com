@@ -6,10 +6,6 @@
   @include clearfix;
 
   margin-bottom: $base-vertical-spacing-unit * 4;
-
-  p {
-    @extend %indented-paragraphs;
-  }
 }
 
 .person__image-holder,
