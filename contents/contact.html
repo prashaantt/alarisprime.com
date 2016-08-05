@@ -19,6 +19,9 @@ title: Contact
 	</div>
 </article>
 
-{{ contactForm(pageIdentifier=title, newsletterSignupUrl=site.newsletterSignupUrl) }}
+{{ contactForm(
+	pageIdentifier=title,
+	email=site.contactEmail,
+	newsletterSignupUrl=site.newsletterSignupUrl) }}
 
 {% endblock %}
