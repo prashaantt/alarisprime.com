@@ -26,6 +26,12 @@
   }
 }
 
+.person__image-frame,
+.person__image {
+  background-color: $color-grey-lighter;
+  border-radius: 2000px;
+}
+
 .person__image-frame {
   position: relative;
   padding-top: 100%;
@@ -38,7 +44,6 @@
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 2000px;
   filter: brightness(150%) grayscale(100%);
 }
 
