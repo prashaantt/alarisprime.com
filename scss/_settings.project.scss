@@ -32,6 +32,9 @@ $base-border-width: 1px;
 $base-border-radius: 1px;
 $base-border: $base-border-width solid $base-border-color;
 
+// Shadow
+$base-box-shadow: 1px 3px 0 transparentize($color-shadow, .9);
+
 // transition
 $base-transition-delay: .1s;
 $base-transition-easing: ease-out;
