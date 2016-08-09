@@ -4,15 +4,16 @@
 			<a href="/"><span class="logo">{% include "../images/logo.svg" %}</span></a>
 		</div>
 		<div class="header__nav" id="header-nav" data-turbolinks-permanent>
-			<div class="main-nav js-main-nav">
-				<a class="nav-link main-nav__dropdown-toggle js-nav-dropdown-toggle" href="javascript:;">Menu</a>
-				<nav class="main-nav__visible-links js-nav-visible">
-					<a class="nav-link {{ 'active' if path == 'work' }}" href="/work/">Work</a>
-					<a class="nav-link {{ 'active' if path == 'team' }}" href="/team/">Team</a>
-					<a class="nav-link {{ 'active' if path == 'contact' }}" href="/contact/">Contact</a>
-					<a class="nav-link" href="{{ site.blogUrl }}">Blog</a>
-				</nav>
-				<div class="main-nav__dropdown js-nav-dropdown"></div>
+			<div class="main-nav">
+				<a class="{{ 'active' if path == 'services' }}" href="/services/">Services</a>
+				<a class="{{ 'active' if path == 'pricing' }}" href="/pricing/">Pricing</a>
+				<a class="{{ 'active' if path == 'contact' }}" href="/contact/">Contact</a>
+				<a class="main-nav__dropdown-toggle js-nav-dropdown-toggle" href="javascript:;">Menu</a>
+				<div class="main-nav__dropdown js-nav-dropdown">
+					<a class="{{ 'active' if path == 'work' }}" href="/work/">Work</a>
+					<a class="{{ 'active' if path == 'team' }}" href="/team/">Team</a>
+					<a href="{{ site.blogUrl }}">Blog</a>
+				</div>
 			</div>
 		</div>
 	</div>
