@@ -31,6 +31,8 @@
   }
 }
 
+// .main-nav__dropdown-caret {}
+
 // .main-nav__dropdown-toggle {}
 
 .main-nav__dropdown {
@@ -57,6 +59,12 @@
   }
 }
 
-.main-nav__dropdown--open {
-  display: flex;
+.main-nav--open {
+  .main-nav__dropdown {
+    display: flex;
+  }
+
+  .main-nav__dropdown-caret {
+    transform: rotate(180deg);
+  }
 }
