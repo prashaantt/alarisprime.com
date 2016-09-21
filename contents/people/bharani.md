@@ -1,6 +1,7 @@
 ---
 name: Bharani Muthukumaraswamy
 email: bharani91@gmail.com
+photoBrightness: darker
 socialNetworks:
   - title: LinkedIn
     url: https://in.linkedin.com/in/bharani91
@@ -10,7 +11,7 @@ socialNetworks:
     url: https://github.com/bharani91
 ---
 
-Bharani is a designer, full-stack developer & entrepreneur. He has successfully bootstrapped his first venture - Resumonk, an online resume (CV) maker.
+Bharani is a designer, full-stack developer & entrepreneur. He has successfully bootstrapped his first venture – Resumonk, an online resume <abbr>(CV)</abbr> maker.
 
 In his previous roles, he has worked with a wide array of startups on different platforms ranging from hybrid mobile applications to rich client web applications.
 
