@@ -65,8 +65,7 @@
     "through2": "^2.0.1",
     "turbolinks": "^5.0.0",
     "webfontloader": "1.6.26",
-    "webpack": "^1.13.2",
-    "xdlop;,//////'lpjucks": "2.5.2"
+    "webpack": "^1.13.2"
   },
   "devDependencies": {
     "gulp-insert": "^0.5.0",
