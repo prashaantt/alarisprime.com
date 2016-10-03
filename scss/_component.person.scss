@@ -47,6 +47,10 @@
   filter: brightness(150%) grayscale(100%);
 }
 
+.person__image--dark {
+  filter: brightness(127.5%) grayscale(100%);
+}
+
 .person__image--darker {
   filter: brightness(105%) grayscale(100%);
 }

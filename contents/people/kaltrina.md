@@ -1,9 +1,12 @@
 ---
 name: Kaltrina Ferizi
-email: kaltrinferizi@gmail.com  
+email: kaltrinferizi@gmail.com
+photoBrightness: dark
 socialNetworks:
   - title: Linkedin
     url: https://www.linkedin.com/in/kaltrinaferizi
+  - title: Website
+    url: http://www.kaltrinaferizi.com
 ---
 
 Kaltrina is a Graphic Designer with expertise in <abbr>UI</abbr>, print and illustration. 
