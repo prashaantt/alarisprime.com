@@ -2,6 +2,9 @@
   "templates": {
     "page": {
       "dest": "./contents"
+    },
+    "person": {
+      "dest": "./contents/people"
     }
   }
 }
