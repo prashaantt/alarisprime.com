@@ -1,15 +1,9 @@
 .main-nav {
-  margin-top: $base-vertical-spacing-unit;
-
-  @include bp(medium) {
-    display: inline-block;
-
-    padding: 0 $base-horizontal-spacing-unit;
-    margin-top: 0;
-  }
+  display: flex;
 
   a {
-    margin-right: $base-horizontal-spacing-unit;
+    display: inline-block;
+    padding: $base-vertical-spacing-unit ($base-horizontal-spacing-unit / 2);
     color: $color-text-light;
     font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
 
