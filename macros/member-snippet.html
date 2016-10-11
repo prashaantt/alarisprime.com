@@ -1,0 +1,19 @@
+{% from "./img-srcset.html" import profileImgSrcset %}
+
+{% macro memberSnippet(metaData, md5Fn, keysFn, console) %}
+<div class="media-object media-object--space-out">
+	<div class="media-object__figure">
+		{% set imageClassNames = 'avatar__image' %}
+		<div class="avatar{% if metaData.photoBrightness %} avatar--{{metaData.photoBrightness }}{% endif %}">{{ profileImgSrcset(class=imageClassNames, emailHash=md5Fn(metaData.email)) }}</div>
+		<h2>{{ metaData.name }}</h2>
+		<nav class="network-list">
+			{% for network in metaData.socialNetworks | sort(false, false, 'title') %}
+				<a href="{{ network.url }}" title="{{ network.title }}">{{ network.title }}</span></a>
+			{% endfor %}
+		</nav>
+	</div>
+	<div class="media-object__content">
+		{{metaData.contents | safe}}
+	</div>
+</div>
+{% endmacro %}

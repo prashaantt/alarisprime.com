@@ -87,6 +87,12 @@ p + br {
   content: ' ';
 }
 
+h1,
+h2,
+h3 {
+  @include hyphensify;
+}
+
 blockquote,
 dd,
 figure,
@@ -139,4 +145,14 @@ abbr {
 
 .small-caps {
   font-feature-settings: $base-opentype-features, 'smcp';
+}
+
+.sub-title {
+  font-weight: $base-font-weight;
+  color: $color-text-light;
+  font-feature-settings: $base-opentype-features, 'smcp', 'c2sc';
+
+  @include bp(medium) {
+    font-size: modular-scale(-1);
+  }
 }

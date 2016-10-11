@@ -1,9 +1,9 @@
 ---
-title: The Team
-description: The team members of Alaris Prime.
+title: We’ve Worked With
+description: The people and companies we collaborate.
 ---
 
-{% from "./macros/person-snippet.html" import personSnippet %}
+{% from "./macros/member-snippet.html" import memberSnippet %}
 {% from "./macros/img-srcset.html" import profileImgSrcset %}
 
 {% extends "./layouts/base.html" %}
@@ -12,14 +12,13 @@ description: The team members of Alaris Prime.
 <article class="article">
 	<div class="article__inner">
 		<div class="article__header">
-			<h1 class="article__title">The Team</h1>
+			<h1 class="article__title">{{title}}</h1>
 		</div>
 		<div class="people">
 			{% for person in collections.people %}
-				{{ personSnippet(person, md5, objectKeys, console) }}
+				{{ memberSnippet(person, md5, objectKeys, console) }}
 			{% endfor %}
 		</div>
 	</div>
 </article>
-{% include "./includes/collaborators.html" %}
 {% endblock %}

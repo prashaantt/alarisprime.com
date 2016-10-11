@@ -1,0 +1,34 @@
+.avatar,
+.avatar__image {
+  width: $base-vertical-spacing-unit * 6;
+  height: $base-vertical-spacing-unit * 6;
+  border-radius: 2000px;
+}
+
+.avatar {
+  display: inline-block;
+  background-color: $color-grey-lighter;
+}
+
+.avatar__image {
+  display: block;
+  filter: brightness(150%) grayscale(100%);
+}
+
+.avatar--dark {
+  .avatar__image {
+    filter: brightness(127.5%) grayscale(100%);
+  }
+}
+
+.avatar--darker {
+  .avatar__image {
+    filter: brightness(105%) grayscale(100%);
+  }
+}
+
+.avatar--brighter {
+  .avatar__image {
+    filter: brightness(165%) grayscale(100%);
+  }
+}
