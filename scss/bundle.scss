@@ -8,29 +8,14 @@
 @import 'sanitize.css/lib/sanitize.scss';
 
 // Tools
-@import 'tools.breakpoints';
-@import 'tools.touch-scroll';
+@import './_tools.*.scss';
 
 // Base
 @import 'base';
 
 // Components
-@import 'component.form';
-@import 'component.button';
-@import 'component.logo';
-@import 'component.main-nav';
-@import 'component.hero-quote';
-@import 'component.hero';
-@import 'component.header';
-@import 'component.footer';
-@import 'component.article';
-@import 'component.person';
-@import 'component.organisation';
-@import 'component.overlay';
-@import 'component.project';
-@import 'component.recent-projects';
+@import './_component.*.scss';
 
 // Vendor
-@import 'vendor.turbolinks';
-@import 'vendor.embedresponsively';
+@import './_vendor.*.scss';
 
