@@ -3,9 +3,17 @@
 {% macro memberSnippet(metaData, md5Fn, keysFn, console) %}
 <div class="media-object media-object--space-out media-object--align-figure-center-on-small">
 	<div class="media-object__figure">
-		{% set imageClassNames = 'avatar__image' %}
-		<div class="avatar{% if metaData.photoBrightness %} avatar--{{metaData.photoBrightness }}{% endif %}">{{ profileImgSrcset(class=imageClassNames, emailHash=md5Fn(metaData.email)) }}</div>
+		{% if metaData.email %}
+			{% set imageClassNames = 'avatar__image' %}
+			<div class="avatar{% if metaData.photoBrightness %} avatar--{{metaData.photoBrightness }}{% endif %}">{{ profileImgSrcset(class=imageClassNames, emailHash=md5Fn(metaData.email)) }}</div>
+		{% endif %}
+		{% if metaData.logoUrl %}
+			<span class="organisation-logo">
+				<img src="{{metaData.logoUrl}}" alt="Logo of {{ metaData.name }}" class="organisation-logo__image">
+			</span>
+		{% else %}
 		<h2>{{ metaData.name }}</h2>
+		{% endif %}
 		<nav class="network-list">
 			{% for network in metaData.socialNetworks | sort(false, false, 'title') %}
 				<a href="{{ network.url }}" title="{{ network.title }}">{{ network.title }}</span></a>

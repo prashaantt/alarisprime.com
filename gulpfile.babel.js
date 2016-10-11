@@ -39,15 +39,15 @@ gulp.task('metalsmith', () => {
 						sortBy: 'date',
 						reverse: true
 					},
-					people: {
-						pattern: 'people/**/*',
+					members: {
+						pattern: 'members/**/*',
 						sortBy: 'name'
 					}
 				}),
 				md,
 				require('metalsmith-ignore')([
 					'projects/*',
-					'people/*'
+					'members/*'
 				]),
 				require('metalsmith-permalinks')(),
 				require('metalsmith-in-place')({

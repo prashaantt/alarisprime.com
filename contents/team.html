@@ -1,5 +1,5 @@
 ---
-title: We’ve Worked With
+title: We Work With
 description: The people and companies we collaborate.
 ---
 
@@ -14,9 +14,9 @@ description: The people and companies we collaborate.
 		<div class="article__header">
 			<h1 class="article__title">{{title}}</h1>
 		</div>
-		<div class="people">
-			{% for person in collections.people %}
-				{{ memberSnippet(person, md5, objectKeys, console) }}
+		<div class="members">
+			{% for member in collections.members %}
+				{{ memberSnippet(member, md5, objectKeys, console) }}
 			{% endfor %}
 		</div>
 	</div>

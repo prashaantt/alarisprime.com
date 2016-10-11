@@ -1,0 +1,10 @@
+.organisation-logo {
+  display: inline-block;
+  height: $base-vertical-spacing-unit * 3;
+
+  img {
+    display: block;
+    height: 100%;
+    opacity: .8;
+  }
+}
