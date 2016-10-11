@@ -1,7 +1,7 @@
 {% from "./img-srcset.html" import profileImgSrcset %}
 
 {% macro memberSnippet(metaData, md5Fn, keysFn, console) %}
-<div class="media-object media-object--space-out">
+<div class="media-object media-object--space-out media-object--align-figure-center-on-small">
 	<div class="media-object__figure">
 		{% set imageClassNames = 'avatar__image' %}
 		<div class="avatar{% if metaData.photoBrightness %} avatar--{{metaData.photoBrightness }}{% endif %}">{{ profileImgSrcset(class=imageClassNames, emailHash=md5Fn(metaData.email)) }}</div>

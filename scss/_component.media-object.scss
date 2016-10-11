@@ -13,12 +13,9 @@
 }
 
 .media-object__figure {
-  text-align: center;
-
   @include bp(medium) {
     width: percentage(3 / 12);
     padding-right: $base-horizontal-spacing-unit / 2;
-    text-align: left;
   }
 }
 
@@ -38,5 +35,21 @@
 
   @include bp(medium) {
     margin-bottom: $base-vertical-spacing-unit * 4;
+  }
+}
+
+.media-object--align-figure-center-on-small {
+  .media-object__figure {
+    text-align: center;
+
+    @include bp(medium) {
+      text-align: left;
+    }
+  }
+}
+
+.media-object--flatten-figure-on-small {
+  .media-object__figure > * {
+    display: inline-block;
   }
 }
