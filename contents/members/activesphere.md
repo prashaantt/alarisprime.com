@@ -1,6 +1,6 @@
 ---
 name: ActiveSphere
-logoUrl: /images/logo-activesphere.svg
+logoUrl: /images/logo-activesphere-color.svg
 socialNetworks:
   - title: Website
     url: http://www.activesphere.com
