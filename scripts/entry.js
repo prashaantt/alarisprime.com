@@ -1,6 +1,7 @@
-require('./webfonts.js');
-const Turbolinks = require('turbolinks');
+import Turbolinks from 'turbolinks';
+import initWebFonts from './webfonts';
+import initOverlayContactForm from './overlay-contact-form';
 
+initWebFonts();
 Turbolinks.start();
-
-require('./overlay-contact-form.js');
+initOverlayContactForm();

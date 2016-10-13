@@ -76,6 +76,9 @@
     "qgen": "^1.1.3"
   },
   "xo": {
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
     "envs": [
       "node",
       "browser"

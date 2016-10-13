@@ -4,7 +4,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import del from 'del';
 import runSequence from 'run-sequence';
 import webpack from 'webpack';
-import browserSync from 'browser-sync';
+import browserSync from 'browser-sync'; // eslint-disable-line import/namespace, import/default, import/no-named-as-default-member, import/no-named-as-default
 import through2 from 'through2';
 import merge from 'merge-stream';
 import metalsmithMarkdown from 'metalsmith-markdownit';
@@ -134,7 +134,7 @@ gulp.task('lint:scripts', () => {
 	return gulp.src([
 		'scripts/**/*.js',
 		'./*.js'
-	])
+	], {base: './'})
 	.pipe($.xo());
 });
 
@@ -178,7 +178,7 @@ gulp.task('assets-rev', () => {
 	.pipe($.rev.manifest())
 	.pipe(gulp.dest('./dist/'))
 	.pipe(through2.obj((file, enc, next) => {
-		let manifest = require(file.path);
+		let manifest = require(file.path); // eslint-disable-line import/no-dynamic-require
 		let paths = Object.keys(manifest).map(x => './dist/' + x);
 
 		del.sync(paths);
