@@ -1,7 +1,11 @@
 var WebFont = require('webfontloader');
 
-WebFont.load({
-	typekit: {
-		id: 'xsv8mqb'
-	}
-});
+const initWebFonts = () => {
+	WebFont.load({
+		typekit: {
+			id: 'xsv8mqb'
+		}
+	});
+};
+
+export default initWebFonts;
