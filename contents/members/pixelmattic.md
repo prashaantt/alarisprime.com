@@ -1,6 +1,6 @@
 ---
 name: Pixelmattic
-logoUrl: /images/logo-pixelmattic-color.svg
+logoUrl: /images/logo-pixelmattic.svg
 socialNetworks:
   - title: Website
     url: http://www.pixelmattic.com
