@@ -54,7 +54,7 @@ gulp.task('metalsmith', () => {
 					engine: 'nunjucks',
 					rename: true,
 					settings: {
-						views: {
+						opts: {
 							noCache: true
 						}
 					}
