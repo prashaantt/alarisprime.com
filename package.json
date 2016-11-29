@@ -67,7 +67,7 @@
     "sanitize.css": "git+https://github.com/ciju/sanitize.css.git",
     "through2": "^2.0.1",
     "turbolinks": "^5.0.0",
-    "webfontloader": "1.6.26",
+    "webfontloader": "1.6.27",
     "webpack": "^1.13.2"
   },
   "devDependencies": {
