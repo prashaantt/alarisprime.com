@@ -18,6 +18,7 @@ const md = metalsmithMarkdown({
 });
 
 const siteConfig = require('./site.config.json');
+siteConfig.date = new Date();
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
